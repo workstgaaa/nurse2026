@@ -26,7 +26,7 @@
     --ph:repeating-linear-gradient(135deg,#F3C1B9 0,#F3C1B9 8px,#FDF6F0 8px,#FDF6F0 16px);
     --c:1100px;--px:60px;--py:80px;
     --h1:62px;--h2:42px;--h3:24px;--body:19px;
-    --hero-cols:1.35fr 1fr;--svc-cols:repeat(3,1fr);--v-cols:repeat(2,1fr);--price-cols:repeat(3,1fr);
+    --hero-cols:1.7fr 1fr;--hero-p-ws:nowrap;--svc-cols:repeat(3,1fr);--v-cols:repeat(2,1fr);--price-cols:repeat(3,1fr);
     --nav-d:flex;--hbg-d:none;--topbar-d:flex;--hero-img-d:block;
     --foot-cols:300px 1fr auto;
     --rev-img:1;--rev-txt:2;
@@ -34,7 +34,7 @@
   }
   @media(max-width:1200px){:root{--nav-d:none;--hbg-d:flex}}
   @media(max-width:1024px){:root{--px:40px;--py:64px;--h1:52px;--h2:35px;--h3:22px;--body:18px;--price-cols:repeat(2,1fr)}}
-  @media(max-width:768px){:root{
+  @media(max-width:768px){:root{--hero-p-ws:normal;
     --px:20px;--py:52px;--h1:37px;--h2:28px;--h3:20px;--body:18px;
     --hero-cols:1fr;--svc-cols:1fr;--price-cols:1fr;--v-cols:1fr;
     --nav-d:none;--hbg-d:flex;--topbar-d:none;--hero-img-d:none;
@@ -114,8 +114,8 @@
           <h1 style="font-family:'Zen Kurenaido',sans-serif;font-size:var(--h1);font-weight:400;color:var(--dark);line-height:1.3;letter-spacing:2px">思いを叶える<br>看護サービス</h1>
         </div>
         <div style="width:52px;height:1px;background:var(--gold)"></div>
-        <p style="font-size:19px;color:var(--mid);line-height:2.1;max-width:640px">病気や障がい、年齢、医療的ケアが必要であることを理由に、<br><span style="color:var(--rose-h);font-weight:600">行きたい・会いたい・帰りたい</span>を諦めてほしくない。<br>看護師だからこそできる安心とサポートで、その人らしい時間を叶えます。</p>
-        <div style="display:flex;gap:20px;flex-wrap:wrap">
+        <p style="font-size:clamp(14px,1.3vw,19px);color:var(--mid);line-height:2.1;white-space:var(--hero-p-ws)">病気や障がい、年齢、医療的ケアが必要であることを理由に、<br><span style="color:var(--rose-h);font-weight:600">行きたい・会いたい・帰りたい</span>を諦めてほしくない。<br>看護師だからこそできる安心とサポートで、その人らしい時間を叶えます。</p>
+        <div style="display:grid;grid-template-columns:repeat(2,max-content);column-gap:40px;row-gap:10px">
           <span style="font-size:18px;color:var(--dark);display:flex;align-items:center;gap:5px;font-weight:500"><span style="color:var(--gold)">✓</span>看護師が付き添う</span>
           <span style="font-size:18px;color:var(--dark);display:flex;align-items:center;gap:5px;font-weight:500"><span style="color:var(--gold)">✓</span>結婚式にも同行</span>
           <span style="font-size:18px;color:var(--dark);display:flex;align-items:center;gap:5px;font-weight:500"><span style="color:var(--gold)">✓</span>旅行にも対応</span>
@@ -762,9 +762,9 @@
     </div>
     <div style="max-width:var(--c);margin:0 auto;display:grid;grid-template-columns:var(--hero-cols);gap:72px;align-items:flex-start">
       <div>
-        <div style="border-radius:32px;overflow:hidden;aspect-ratio:3/4;max-width:360px;margin-bottom:24px;background:var(--cream)"><img src="docs/人物イラスト.png" alt="代表イラスト" style="width:100%;height:100%;object-fit:cover;object-position:center 10%">
+        <div style="border-radius:32px;overflow:hidden;aspect-ratio:3/4;max-width:440px;margin-bottom:24px;background:var(--cream)"><img src="docs/人物イラスト.png" alt="代表イラスト" style="width:100%;height:100%;object-fit:cover;object-position:center 10%">
         </div>
-        <div style="padding:24px;background:var(--cream);border-radius:8px;max-width:85%;margin:0 auto">
+        <div style="padding:24px;background:var(--cream);border-radius:8px;max-width:440px;box-sizing:border-box">
           <h3 style="font-size:18px;font-weight:500;color:var(--dark);margin-bottom:16px">資格・経歴</h3>
           <div style="display:flex;flex-direction:column;gap:8px">
             <div style="display:flex;gap:12px;font-size:17px"><span style="color:var(--rose);flex-shrink:0">✓</span><span style="color:var(--mid)">正看護師・保健師</span></div>
