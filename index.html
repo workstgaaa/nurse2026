@@ -123,7 +123,7 @@
         </div>
       </div>
       <div style="width:100%;aspect-ratio:1/1;border-radius:28px;overflow:hidden;box-shadow:0 16px 44px rgba(45,30,26,0.14);display:var(--hero-img-d);position:relative">
-        <sc-for list="{{ heroSlides }}" as="slide" hint-placeholder-count="3">
+        <sc-for list="{{ heroSlides }}" as="slide" hint-placeholder-count="0">
           <img src="{{ slide.src }}" alt="{{ slide.alt }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 15%;opacity:{{ slide.opacity }};transition:opacity 1.2s ease-in-out">
         </sc-for>
         <div style="position:absolute;bottom:16px;left:0;right:0;display:flex;justify-content:center;gap:8px;z-index:2">
@@ -150,7 +150,7 @@
           <div style="padding:28px 28px 0;display:flex;justify-content:center"><div style="width:200px;height:200px;border-radius:50%;overflow:hidden;flex-shrink:0;border:3px solid var(--rose-l)"><img src="docs/旅行同行.jpg" alt="旅行同行イラスト" style="width:100%;height:100%;object-fit:cover;object-position:center 20%"></div></div>
           <div style="padding:20px 24px 28px;text-align:center">
             <p style="font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--rose-h);letter-spacing:3px;margin-bottom:8px">Travel</p>
-            <h3 style="font-size:26px;font-weight:500;color:var(--dark);margin-bottom:12px">お出かけ・旅行同行サポート</h3>
+            <h3 style="font-size:clamp(15px,1.55vw,22px);font-weight:500;color:var(--dark);margin-bottom:12px;white-space:nowrap;letter-spacing:0;margin-left:-12px;margin-right:-12px">お出かけ・旅行同行サポート</h3>
             <p style="font-size:18px;color:var(--mid);line-height:2.0;margin-bottom:20px">泊まりがけの旅行も安心してご一緒します。新幹線・飛行機にも対応。医療的ケアが必要な方もご相談ください。</p>
             <button onClick="{{ navService }}" style="font-size:17px;color:var(--rose);border-bottom:1px solid var(--rose);padding-bottom:2px" style-hover="color:var(--rose-h)">詳しく見る →</button>
           </div>
@@ -159,7 +159,7 @@
           <div style="padding:28px 28px 0;display:flex;justify-content:center"><div style="width:200px;height:200px;border-radius:50%;overflow:hidden;flex-shrink:0;border:3px solid var(--rose-l);background:#ffffff"><img src="docs/介護タクシー.jpg" alt="介護タクシー" style="width:130%;height:130%;object-fit:contain;object-position:center center;transform:translate(-12%,-8%)"></div></div>
           <div style="padding:20px 24px 28px;text-align:center">
             <p style="font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--rose-h);letter-spacing:3px;margin-bottom:8px">Transport</p>
-            <h3 style="font-size:26px;font-weight:500;color:var(--dark);margin-bottom:12px">介護タクシー・移動サポート</h3>
+            <h3 style="font-size:clamp(15px,1.55vw,22px);font-weight:500;color:var(--dark);margin-bottom:12px;white-space:nowrap;letter-spacing:0;margin-left:-12px;margin-right:-12px">介護タクシー・移動サポート</h3>
             <p style="font-size:18px;color:var(--mid);line-height:2.0;margin-bottom:20px">移動手段の調整から当日の付き添いまで一貫して対応。ストレッチャー対応車両もご利用いただけます。</p>
             <button onClick="{{ navService }}" style="font-size:17px;color:var(--rose);border-bottom:1px solid var(--rose);padding-bottom:2px" style-hover="color:var(--rose-h)">詳しく見る →</button>
           </div>
@@ -168,7 +168,7 @@
           <div style="padding:28px 28px 0;display:flex;justify-content:center"><div style="width:200px;height:200px;border-radius:50%;overflow:hidden;flex-shrink:0;border:3px solid var(--rose-l)"><img src="docs/見守りサービス.jpg" alt="見守りサービス" style="width:100%;height:100%;object-fit:cover"></div></div>
           <div style="padding:20px 24px 28px;text-align:center">
             <p style="font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--rose-h);letter-spacing:3px;margin-bottom:8px">Home Visit</p>
-            <h3 style="font-size:26px;font-weight:500;color:var(--dark);margin-bottom:12px">高齢者の見守りサービス</h3>
+            <h3 style="font-size:clamp(15px,1.55vw,22px);font-weight:500;color:var(--dark);margin-bottom:12px;white-space:nowrap;letter-spacing:0;margin-left:-12px;margin-right:-12px">高齢者の見守りサービス</h3>
             <p style="font-size:18px;color:var(--mid);line-height:2.0;margin-bottom:20px">看護師が定期的に訪問し、体調やご様子を確認。常に見守れないご家族にかわって安心をお届けします。</p>
             <button onClick="{{ navService }}" style="font-size:17px;color:var(--rose);border-bottom:1px solid var(--rose);padding-bottom:2px" style-hover="color:var(--rose-h)">詳しく見る →</button>
           </div>
@@ -528,11 +528,11 @@
       <div style="margin-top:32px">
         <h3 style="font-size:var(--h3);font-weight:500;color:var(--dark);margin-bottom:16px">キャンセルポリシー</h3>
         <p style="font-size:17px;color:var(--mid);line-height:2.0;margin-bottom:20px">お申し込み後のキャンセルにつきましては、看護師や車両、関係事業者等の調整を事前に行っているため、キャンセルの時期に応じて下記のキャンセル料を申し受けます。キャンセル料は、看護師同行料等の当社サービス料金を基準に算出いたします。</p>
-        <div style="display:flex;flex-direction:column;gap:0;border-top:1px solid var(--border);width:460px">
-          <div style="display:flex;width:460px;padding:12px 0;border-bottom:1px solid var(--border)"><span style="font-size:17px;color:var(--mid);width:260px;flex-shrink:0">ご利用日の7日前まで</span><span style="font-size:17px;color:var(--dark);font-weight:500">無料</span></div>
-          <div style="display:flex;width:460px;padding:12px 0;border-bottom:1px solid var(--border)"><span style="font-size:17px;color:var(--mid);width:260px;flex-shrink:0">6日前〜3日前</span><span style="font-size:17px;color:var(--dark);font-weight:500">当社サービス料金の30%</span></div>
-          <div style="display:flex;width:460px;padding:12px 0;border-bottom:1px solid var(--border)"><span style="font-size:17px;color:var(--mid);width:260px;flex-shrink:0">2日前〜前日</span><span style="font-size:17px;color:var(--dark);font-weight:500">当社サービス料金の50%</span></div>
-          <div style="display:flex;width:460px;padding:12px 0;border-bottom:1px solid var(--border)"><span style="font-size:17px;color:var(--mid);width:260px;flex-shrink:0">当日キャンセル</span><span style="font-size:17px;color:var(--dark);font-weight:500">当社サービス料金の100%</span></div>
+        <div style="display:flex;flex-direction:column;gap:0;border-top:1px solid var(--border);width:640px;max-width:100%;margin:0 auto">
+          <div style="display:flex;width:100%;padding:12px 0 12px 90px;border-bottom:1px solid var(--border)"><span style="font-size:17px;color:var(--mid);width:260px;flex-shrink:0">ご利用日の7日前まで</span><span style="font-size:17px;color:var(--dark);font-weight:500">無料</span></div>
+          <div style="display:flex;width:100%;padding:12px 0 12px 90px;border-bottom:1px solid var(--border)"><span style="font-size:17px;color:var(--mid);width:260px;flex-shrink:0">6日前〜3日前</span><span style="font-size:17px;color:var(--dark);font-weight:500">当社サービス料金の30%</span></div>
+          <div style="display:flex;width:100%;padding:12px 0 12px 90px;border-bottom:1px solid var(--border)"><span style="font-size:17px;color:var(--mid);width:260px;flex-shrink:0">2日前〜前日</span><span style="font-size:17px;color:var(--dark);font-weight:500">当社サービス料金の50%</span></div>
+          <div style="display:flex;width:100%;padding:12px 0 12px 90px;border-bottom:1px solid var(--border)"><span style="font-size:17px;color:var(--mid);width:260px;flex-shrink:0">当日キャンセル</span><span style="font-size:17px;color:var(--dark);font-weight:500">当社サービス料金の100%</span></div>
         </div>
         <div style="margin-top:24px">
           <h4 style="font-size:18px;font-weight:500;color:var(--dark);margin-bottom:8px">体調変化など、やむを得ない場合について</h4>
