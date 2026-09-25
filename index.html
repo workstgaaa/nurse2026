@@ -41,8 +41,6 @@
     --foot-cols:1fr;--rev-img:2;--rev-txt:1;
     --flow-line:none;--flow-dir:column;--flow-align:stretch;--fi-dir:row;--fi-ta:left;--fi-gap:18px;--fi-num-m:0;--fi-pad:0;
   }}
-  @font-face{font-family:'Charifont';src:url('uploads/Charifont.otf') format('opentype');font-weight:normal;font-style:normal}
-  @font-face{font-family:'Omakebold';src:url('uploads/omakebold.ttf') format('truetype');font-weight:normal;font-style:normal}
   @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
   @keyframes fadeIn{from{opacity:0}to{opacity:1}}
   @keyframes twinkle{0%,100%{opacity:0;transform:scale(.5) rotate(0deg)}50%{opacity:1;transform:scale(1) rotate(20deg)}}
@@ -53,7 +51,6 @@
   button,a{transition:background .22s ease,color .22s ease,border-color .22s ease,box-shadow .22s ease,transform .18s ease,opacity .2s ease}
   button:hover,a:hover{transform:translateY(-2px)}
 </style>
-<script src="./image-slot.js"></script>
 </helmet>
 <template id="__bundler_thumbnail" data-bg-color="#F3C1B9"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="22" fill="#FDF6F0"></circle><text x="50" y="58" text-anchor="middle" font-family="Georgia,serif" font-size="24" fill="#2B1E1E">L</text></svg></template>
 
@@ -149,7 +146,7 @@
       </div>
       <div style="display:grid;grid-template-columns:var(--svc-cols);gap:28px">
         <div onClick="{{ navService }}" style="border:1px solid var(--border);border-radius:24px;overflow:hidden;transition:box-shadow .25s,transform .25s;cursor:pointer" style-hover="box-shadow:0 10px 36px rgba(45,30,26,0.1);transform:translateY(-4px)">
-          <div style="padding:28px 28px 0;display:flex;justify-content:center"><div style="width:200px;height:200px;border-radius:50%;overflow:hidden;flex-shrink:0;border:3px solid var(--rose-l)"><img src="uploads/Gemini_Generated_Image_l2o8r1l2o8r1l2o8.jpg" alt="旅行同行イラスト" style="width:100%;height:100%;object-fit:cover;object-position:center 20%"></div></div>
+          <div style="padding:28px 28px 0;display:flex;justify-content:center"><div style="width:200px;height:200px;border-radius:50%;overflow:hidden;flex-shrink:0;border:3px solid var(--rose-l)"><img src="docs/旅行同行.jpg" alt="旅行同行イラスト" style="width:100%;height:100%;object-fit:cover;object-position:center 20%"></div></div>
           <div style="padding:20px 24px 28px;text-align:center">
             <p style="font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--rose-h);letter-spacing:3px;margin-bottom:8px">Travel</p>
             <h3 style="font-size:26px;font-weight:500;color:var(--dark);margin-bottom:12px">お出かけ・旅行同行サポート</h3>
@@ -158,7 +155,7 @@
           </div>
         </div>
         <div onClick="{{ navService }}" style="border:1px solid var(--border);border-radius:24px;overflow:hidden;transition:box-shadow .25s,transform .25s;cursor:pointer" style-hover="box-shadow:0 10px 36px rgba(45,30,26,0.1);transform:translateY(-4px)">
-          <div style="padding:28px 28px 0;display:flex;justify-content:center"><div style="width:200px;height:200px;border-radius:50%;overflow:hidden;flex-shrink:0;border:3px solid var(--rose-l);background:#ffffff"><img src="uploads/c6a140d2-de28-4d50-9ed0-24b1cb1660b4.jpg" alt="介護タクシー" style="width:130%;height:130%;object-fit:contain;object-position:center center;transform:translate(-12%,-8%)"></div></div>
+          <div style="padding:28px 28px 0;display:flex;justify-content:center"><div style="width:200px;height:200px;border-radius:50%;overflow:hidden;flex-shrink:0;border:3px solid var(--rose-l);background:#ffffff"><img src="docs/介護タクシー.jpg" alt="介護タクシー" style="width:130%;height:130%;object-fit:contain;object-position:center center;transform:translate(-12%,-8%)"></div></div>
           <div style="padding:20px 24px 28px;text-align:center">
             <p style="font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--rose-h);letter-spacing:3px;margin-bottom:8px">Transport</p>
             <h3 style="font-size:26px;font-weight:500;color:var(--dark);margin-bottom:12px">介護タクシー・移動サポート</h3>
@@ -167,7 +164,7 @@
           </div>
         </div>
         <div onClick="{{ navService }}" style="border:1px solid var(--border);border-radius:24px;overflow:hidden;transition:box-shadow .25s,transform .25s;cursor:pointer" style-hover="box-shadow:0 10px 36px rgba(45,30,26,0.1);transform:translateY(-4px)">
-          <div style="padding:28px 28px 0;display:flex;justify-content:center"><div style="width:200px;height:200px;border-radius:50%;overflow:hidden;flex-shrink:0;border:3px solid var(--rose-l)"><img src="uploads/b5a50f07-6174-41b1-b7ea-2e079b5cad86.jpg" alt="見守りサービス" style="width:100%;height:100%;object-fit:cover"></div></div>
+          <div style="padding:28px 28px 0;display:flex;justify-content:center"><div style="width:200px;height:200px;border-radius:50%;overflow:hidden;flex-shrink:0;border:3px solid var(--rose-l)"><img src="docs/見守りサービス.jpg" alt="見守りサービス" style="width:100%;height:100%;object-fit:cover"></div></div>
           <div style="padding:20px 24px 28px;text-align:center">
             <p style="font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--rose-h);letter-spacing:3px;margin-bottom:8px">Home Visit</p>
             <h3 style="font-size:26px;font-weight:500;color:var(--dark);margin-bottom:12px">高齢者の見守りサービス</h3>
@@ -196,7 +193,7 @@
         <button onClick="{{ navProfile }}" style="font-size:18px;color:var(--rose);border-bottom:1px solid var(--rose);padding-bottom:2px" style-hover="color:var(--rose-h)">代表プロフィールを見る →</button>
       </div>
       <div style="display:flex;align-items:center;gap:28px">
-        <div style="width:140px;height:140px;border-radius:50%;overflow:hidden;border:4px solid var(--rose);box-shadow:0 0 0 8px var(--rose-l);flex-shrink:0"><img src="uploads/人物イラスト.png" alt="代表イラスト" style="width:100%;height:100%;object-fit:cover;object-position:center top">
+        <div style="width:140px;height:140px;border-radius:50%;overflow:hidden;border:4px solid var(--rose);box-shadow:0 0 0 8px var(--rose-l);flex-shrink:0"><img src="docs/人物イラスト.png" alt="代表イラスト" style="width:100%;height:100%;object-fit:cover;object-position:center top">
         </div>
         <div>
           <p style="font-size:15px;color:var(--rose);letter-spacing:2px;margin-bottom:6px">代表</p>
@@ -349,7 +346,7 @@
         </div>
         
       </div>
-      <div style="border-radius:32px;overflow:hidden;min-height:360px"><img src="uploads/Gemini_Generated_Image_l2o8r1l2o8r1l2o8.jpg" alt="旅行同行イラスト" style="width:100%;height:100%;object-fit:cover;object-position:center top;min-height:360px"></div>
+      <div style="border-radius:32px;overflow:hidden;min-height:360px"><img src="docs/旅行同行.jpg" alt="旅行同行イラスト" style="width:100%;height:100%;object-fit:cover;object-position:center top;min-height:360px"></div>
     </div>
   </div>
   <div style="background:var(--white);padding:var(--py) var(--px)">
@@ -366,7 +363,7 @@
         </div>
         
       </div>
-      <div style="border-radius:32px;overflow:hidden;min-height:360px;background:#ffffff;display:flex;align-items:center;justify-content:center"><img src="uploads/c6a140d2-de28-4d50-9ed0-24b1cb1660b4.jpg" alt="介護タクシー" style="width:90%;height:auto;object-fit:contain;padding:24px"></div>
+      <div style="border-radius:32px;overflow:hidden;min-height:360px;background:#ffffff;display:flex;align-items:center;justify-content:center"><img src="docs/介護タクシー.jpg" alt="介護タクシー" style="width:90%;height:auto;object-fit:contain;padding:24px"></div>
     </div>
   </div>
   <div style="background:var(--white);padding:var(--py) var(--px)">
@@ -383,7 +380,7 @@
         </div>
         
       </div>
-      <div style="border-radius:32px;overflow:hidden;min-height:360px"><img src="uploads/b5a50f07-6174-41b1-b7ea-2e079b5cad86.jpg" alt="見守りサービス" style="width:100%;height:100%;object-fit:cover"></div>
+      <div style="border-radius:32px;overflow:hidden;min-height:360px"><img src="docs/見守りサービス.jpg" alt="見守りサービス" style="width:100%;height:100%;object-fit:cover"></div>
     </div>
   </div>
   
@@ -764,7 +761,7 @@
     </div>
     <div style="max-width:var(--c);margin:0 auto;display:grid;grid-template-columns:var(--hero-cols);gap:72px;align-items:flex-start">
       <div>
-        <div style="border-radius:32px;overflow:hidden;aspect-ratio:3/4;max-width:360px;margin-bottom:24px;background:var(--cream)"><img src="uploads/人物イラスト.png" alt="代表イラスト" style="width:100%;height:100%;object-fit:cover;object-position:center 10%">
+        <div style="border-radius:32px;overflow:hidden;aspect-ratio:3/4;max-width:360px;margin-bottom:24px;background:var(--cream)"><img src="docs/人物イラスト.png" alt="代表イラスト" style="width:100%;height:100%;object-fit:cover;object-position:center 10%">
         </div>
         <div style="padding:24px;background:var(--cream);border-radius:8px;max-width:85%;margin:0 auto">
           <h3 style="font-size:18px;font-weight:500;color:var(--dark);margin-bottom:16px">資格・経歴</h3>
@@ -925,10 +922,10 @@
 class Component extends DCLogic {
   state = { page: 'home', mobileOpen: false, faqOpen: -1, showTop: false, taglineChars: 0, taglineFullWidth: 0, heroSlide: 0 };
   heroImages = [
-    { src: 'uploads/Gemini_Generated_Image_l2o8r1l2o8r1l2o8-ac90ecd3.jpg', alt: '旅行同行の様子' },
-    { src: 'uploads/686dfb8a-001e-4e27-80fb-3b2930921cc4.jpg', alt: '新幹線での同行の様子' },
-    { src: 'uploads/a819105c-f130-4d99-801d-70f891391b0c.jpg', alt: '結婚式への同行の様子' },
-    { src: 'uploads/b5a50f07-6174-41b1-b7ea-2e079b5cad86.jpg', alt: '見守りサービスの様子' }
+    { src: 'docs/旅行同行.jpg', alt: '旅行同行の様子' },
+    { src: 'docs/長距離移動.jpg', alt: '新幹線での同行の様子' },
+    { src: 'docs/結婚式同行.jpg', alt: '結婚式への同行の様子' },
+    { src: 'docs/見守りサービス.jpg', alt: '見守りサービスの様子' }
   ];
   taglineFull = '病気や障がいがあっても、「やりたい」を諦めない。';
 
