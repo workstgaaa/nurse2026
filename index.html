@@ -63,6 +63,7 @@
       <svg id="ribbon-underline" width="150" height="8" viewBox="0 0 150 8" fill="none" style="display:block;margin-top:2px;opacity:.8"><path d="M1 5 Q37 2 75 5 Q112 8 149 3" stroke="#c8a860" stroke-width="1.2" fill="none" stroke-linecap="round"></path></svg>
     </button>
     <nav style="display:var(--nav-d);align-items:center;gap:26px">
+      <button onClick="{{ navHome }}" style="font-size:17px;white-space:nowrap;color:{{ ncHome }};border-bottom:{{ nbHome }};padding:4px 0" style-hover="color:var(--rose)">TOP</button>
       <button onClick="{{ navService }}" style="font-size:17px;white-space:nowrap;color:{{ ncSvc }};border-bottom:{{ nbSvc }};padding:4px 0" style-hover="color:var(--rose)">サービス</button>
       <button onClick="{{ navFlow }}" style="font-size:17px;white-space:nowrap;color:{{ ncFlow }};border-bottom:{{ nbFlow }};padding:4px 0" style-hover="color:var(--rose)">ご利用の流れ</button>
       <button onClick="{{ navPricing }}" style="font-size:17px;white-space:nowrap;color:{{ ncPrice }};border-bottom:{{ nbPrice }};padding:4px 0" style-hover="color:var(--rose)">料金</button>
@@ -363,7 +364,7 @@
         </div>
         
       </div>
-      <div style="border-radius:32px;overflow:hidden;min-height:360px;background:#ffffff;display:flex;align-items:center;justify-content:center"><img src="docs/介護タクシー.jpg" alt="介護タクシー" style="width:90%;height:auto;object-fit:contain;padding:24px"></div>
+      <div style="border-radius:32px;overflow:hidden;background:#ffffff;align-self:center"><img src="docs/介護タクシー.jpg" alt="介護タクシー" style="width:100%;height:auto;display:block"></div>
     </div>
   </div>
   <div style="background:var(--white);padding:var(--py) var(--px)">
@@ -380,7 +381,7 @@
         </div>
         
       </div>
-      <div style="border-radius:32px;overflow:hidden;min-height:360px"><img src="docs/見守りサービス.jpg" alt="見守りサービス" style="width:100%;height:100%;object-fit:cover"></div>
+      <div style="border-radius:32px;overflow:hidden;min-height:360px"><img src="docs/見守りサービス.jpg" alt="見守りサービス" style="width:100%;height:100%;object-fit:cover;object-position:center top;min-height:360px"></div>
     </div>
   </div>
   
@@ -1019,6 +1020,7 @@ class Component extends DCLogic {
       showRecruit: page === 'recruit', navRecruit: n('recruit'),
       showPrivacy: page === 'privacy', navPrivacy: n('privacy'),
       ncRecruit: nc('recruit'), nbRecruit: nb('recruit'),
+      ncHome: nc('home'), nbHome: nb('home'),
       ncSvc: nc('service'), nbSvc: nb('service'),
       ncFlow: nc('flow'), nbFlow: nb('flow'),
       ncPrice: nc('pricing'), nbPrice: nb('pricing'),
