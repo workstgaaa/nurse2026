@@ -10,7 +10,7 @@
 <helmet data-dc-atomics="">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=Noto+Serif+JP:wght@300;400;500;600&amp;family=Zen+Maru+Gothic:wght@400;500;700&amp;family=Nunito:wght@400;600;700&amp;family=Klee+One:wght@400;600&amp;family=Zen+Kurenaido&amp;family=Shalimar&amp;family=Carattere&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=Noto+Serif+JP:wght@300;400;500;600&amp;family=Zen+Maru+Gothic:wght@400;500;700&amp;family=Nunito:wght@400;600;700;800&amp;family=Klee+One:wght@400;600&amp;family=Zen+Kurenaido&amp;family=Shalimar&amp;family=Carattere&amp;display=swap" rel="stylesheet">
 <style>
   *,*::before,*::after{box-sizing:border-box}
   html,body{margin:0;padding:0;scroll-behavior:smooth}
@@ -26,14 +26,14 @@
     --ph:repeating-linear-gradient(135deg,#F3C1B9 0,#F3C1B9 8px,#FDF6F0 8px,#FDF6F0 16px);
     --c:1100px;--px:60px;--py:80px;
     --h1:62px;--h2:42px;--h3:24px;--body:19px;
-    --hero-cols:minmax(0,1.35fr) minmax(0,1fr);--prof-cols:minmax(0,480px) minmax(0,1fr);--cred-ws:nowrap;--hero-p-ws:nowrap;--svc-cols:repeat(3,1fr);--v-cols:repeat(2,1fr);--price-cols:repeat(3,1fr);
+    --hero-cols:minmax(0,1.35fr) minmax(0,1fr);--prof-cols:minmax(0,480px) minmax(0,1fr);--cred-ws:nowrap;--hero-p-ws:nowrap;--svc-cols:repeat(3,1fr);--v-cols:repeat(2,1fr);--price-cols:repeat(2,minmax(0,1fr));--pc-cols:1fr;--pc-c1:auto;--pc-c2:auto;--pc-c3:auto;--pc-r:auto;--pc-ta:center;--pc-bt:1px solid var(--border);--pc-bl:none;--pc-pp:20px 0 0;--pc-mb:20px;--pc-hmb:20px;--pc-jc:center;--pc-last-col:1 / -1;--pc-last-w:calc(50% - 12px);
     --nav-d:flex;--hbg-d:none;--topbar-d:flex;--hero-img-d:block;
     --foot-cols:300px 1fr auto;
     --rev-img:1;--rev-txt:2;
     --flow-line:block;--flow-dir:row;--flow-align:flex-start;--fi-dir:column;--fi-ta:center;--fi-gap:0;--fi-num-m:0 auto 16px;--fi-pad:0 12px;--fi-h3-mh:3em;
   }
   @media(max-width:1200px){:root{--nav-d:none;--hbg-d:flex}}
-  @media(max-width:1024px){:root{--px:40px;--py:64px;--h1:52px;--h2:35px;--h3:22px;--body:18px;--price-cols:repeat(2,1fr)}}
+  @media(max-width:1024px){:root{--px:40px;--py:64px;--h1:52px;--h2:35px;--h3:22px;--body:18px;--price-cols:1fr;--pc-last-w:100%;--pc-cols:1fr;--pc-c1:auto;--pc-c2:auto;--pc-c3:auto;--pc-r:auto;--pc-ta:center;--pc-bt:1px solid var(--border);--pc-bl:none;--pc-pp:20px 0 0;--pc-mb:20px;--pc-hmb:20px;--pc-jc:center}}
   @media(max-width:768px){:root{--cred-ws:normal;--prof-cols:1fr;--hero-p-ws:normal;
     --px:20px;--py:52px;--h1:37px;--h2:28px;--h3:20px;--body:18px;
     --hero-cols:1fr;--svc-cols:1fr;--price-cols:1fr;--v-cols:1fr;
@@ -112,6 +112,7 @@
         <div>
           <p style="font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--rose-h);letter-spacing:3px;margin-bottom:20px">— Nursing with Heart</p>
           <h1 style="font-family:'Zen Maru Gothic',sans-serif;font-size:var(--h1);font-weight:400;color:var(--dark);line-height:1.3;letter-spacing:2px">思いを叶える<br>看護サービス</h1>
+          <p style="font-size:clamp(17px,1.7vw,24px);font-weight:500;color:var(--rose-h);letter-spacing:1px;margin-top:18px;line-height:1.6">看護師が付き添う、外出・旅行・移動サポート</p>
         </div>
         <div style="width:52px;height:1px;background:var(--gold)"></div>
         <p style="font-size:clamp(14px,1.3vw,19px);color:var(--mid);line-height:2.1;white-space:var(--hero-p-ws)">病気や障がい、年齢、医療的ケアが必要であることを理由に、<br><span style="color:var(--rose-h);font-weight:600">行きたい・会いたい・帰りたい</span>を諦めてほしくない。<br>看護師だからこそできる安心とサポートで、その人らしい時間を叶えます。</p>
@@ -474,46 +475,46 @@
   <section style="background:var(--white);padding:var(--py) var(--px)">
     <div style="max-width:var(--c);margin:0 auto">
       <div style="display:grid;grid-template-columns:var(--price-cols);gap:24px">
-        <div style="border:2px solid var(--border);border-radius:24px;padding:36px 28px;text-align:center">
-          <p style="font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--rose-h);letter-spacing:3px;margin-bottom:12px">Outing</p>
-          <h3 style="font-size:var(--h3);font-weight:500;color:var(--dark);margin-bottom:20px">お出かけ同行</h3>
-          <div style="border-top:1px solid var(--border);padding-top:20px;margin-bottom:20px">
-            <p style="font-size:16px;color:var(--light);margin-bottom:4px">1時間あたり</p>
-            <p style="font-size:30px;font-weight:300;color:var(--dark)">¥7,700〜16,500</p>
-            <p style="font-size:16px;color:var(--light);margin-top:8px">1時間からご利用可能／交通費は別途</p>
-            <p style="font-size:clamp(13px,1.2vw,16px);color:var(--light);margin-top:10px;white-space:nowrap;text-align:center">価格はすべて税込</p>
+        <div style="border:2px solid var(--border);border-radius:24px;padding:40px 44px;text-align:var(--pc-ta);display:grid;grid-template-columns:var(--pc-cols);column-gap:44px;align-items:center;align-content:start">
+          <p style="font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--rose-h);letter-spacing:3px;margin-bottom:12px;grid-column:var(--pc-c1);align-self:end">Outing</p>
+          <h3 style="font-size:var(--h3);font-weight:500;color:var(--dark);margin-bottom:var(--pc-hmb);grid-column:var(--pc-c1);align-self:start">お出かけ同行</h3>
+          <div style="border-top:var(--pc-bt);border-left:var(--pc-bl);padding:var(--pc-pp);margin-bottom:var(--pc-mb);grid-column:var(--pc-c2);grid-row:var(--pc-r)">
+            <p style="margin-bottom:10px"><span style="font-size:15px;display:inline-flex;align-items:center;justify-content:center;text-align:center;background:var(--rose-p);border:1px solid var(--rose-l);color:var(--rose-h);font-weight:500;border-radius:50%;width:84px;height:84px;line-height:1.35;white-space:normal;flex-shrink:0">1時間<br>あたり</span></p>
+            <p style="font-family:'Nunito',sans-serif;font-size:40px;font-weight:800;color:var(--dark);line-height:1.2">¥7,700〜16,500</p>
+            <p style="font-size:clamp(13px,1.2vw,16px);color:var(--light);margin-top:10px;white-space:nowrap;text-align:var(--pc-ta)">価格はすべて税込</p>
           </div>
-          <div style="display:flex;flex-direction:column;gap:8px;text-align:left">
-            <div style="display:flex;gap:8px;font-size:17px;color:var(--mid)"><span style="color:var(--gold)">✓</span>通院・買い物・散歩など</div>
+          <div style="display:flex;flex-direction:column;gap:8px;text-align:left;grid-column:var(--pc-c3);grid-row:var(--pc-r)">
+            <div style="display:flex;gap:8px;font-size:17px;color:var(--mid)"><span style="color:var(--gold)">✓</span>通院・買い物・散歩など1時間からご利用可能</div>
+            <div style="display:flex;gap:8px;font-size:17px;color:var(--mid)"><span style="color:var(--gold)">✓</span>交通費は別途</div>
             <div style="display:flex;gap:8px;font-size:17px;color:var(--mid)"><span style="color:var(--gold)">✓</span>介護度や必要な医療行為により変動</div>
           </div>
         </div>
-        <div style="border:2px solid var(--rose);border-radius:24px;padding:36px 28px;text-align:center;position:relative">
-          <div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--rose);color:var(--white);font-size:15px;padding:4px 16px;border-radius:12px;white-space:nowrap">人気のプラン</div>
-          <p style="font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--rose-h);letter-spacing:3px;margin-bottom:12px">Travel</p>
-          <h3 style="font-size:var(--h3);font-weight:500;color:var(--dark);margin-bottom:20px">お得なパック料金</h3>
-          <div style="border-top:1px solid var(--border);padding-top:20px;margin-bottom:20px;text-align:left">
-            <div style="display:grid;grid-template-columns:max-content max-content;justify-content:center;column-gap:28px;row-gap:8px;align-items:baseline;white-space:nowrap">
-              <span style="font-size:17px;color:var(--mid)">8時間パック</span><span style="font-size:20px;color:var(--dark);font-weight:500">¥46,200〜99,000</span>
-              <span style="font-size:17px;color:var(--mid)">延長1時間あたり</span><span style="font-size:20px;color:var(--dark);font-weight:500">¥8,800</span>
-              <span style="font-size:17px;color:var(--mid)">1泊2日</span><span style="font-size:20px;color:var(--dark);font-weight:500">¥115,500〜</span>
-              <span style="font-size:17px;color:var(--mid)">2泊3日</span><span style="font-size:20px;color:var(--dark);font-weight:500">¥173,250〜</span>
+        <div style="border:2px solid var(--border);border-radius:24px;padding:40px 44px;text-align:var(--pc-ta);display:grid;grid-template-columns:var(--pc-cols);column-gap:44px;align-items:center;align-content:start;position:relative">
+          <p style="font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--rose-h);letter-spacing:3px;margin-bottom:12px;grid-column:var(--pc-c1);align-self:end">Travel</p>
+          <h3 style="font-size:var(--h3);font-weight:500;color:var(--dark);margin-bottom:var(--pc-hmb);grid-column:var(--pc-c1);align-self:start">お得なパック料金</h3>
+          <div style="border-top:var(--pc-bt);border-left:var(--pc-bl);padding:var(--pc-pp);margin-bottom:var(--pc-mb);grid-column:var(--pc-c2);grid-row:var(--pc-r);text-align:left">
+            <div style="display:grid;grid-template-columns:max-content max-content;justify-content:var(--pc-jc);column-gap:24px;row-gap:14px;align-items:center;white-space:nowrap">
+              <span style="font-size:15px;justify-self:start;display:inline-flex;align-items:center;justify-content:center;text-align:center;background:var(--rose-p);border:1px solid var(--rose-l);color:var(--rose-h);font-weight:500;border-radius:50%;width:84px;height:84px;line-height:1.35;white-space:normal;flex-shrink:0">8時間<br>パック</span><span style="font-family:'Nunito',sans-serif;font-size:28px;color:var(--dark);font-weight:800">¥46,200〜99,000</span>
+              <span style="font-size:15px;justify-self:start;display:inline-flex;align-items:center;justify-content:center;text-align:center;background:var(--rose-p);border:1px solid var(--rose-l);color:var(--rose-h);font-weight:500;border-radius:50%;width:84px;height:84px;line-height:1.35;white-space:normal;flex-shrink:0">延長<br>1時間<br>あたり</span><span style="font-family:'Nunito',sans-serif;font-size:28px;color:var(--dark);font-weight:800">¥8,800</span>
+              <span style="font-size:15px;justify-self:start;display:inline-flex;align-items:center;justify-content:center;text-align:center;background:var(--rose-p);border:1px solid var(--rose-l);color:var(--rose-h);font-weight:500;border-radius:50%;width:84px;height:84px;line-height:1.35;white-space:normal;flex-shrink:0">1泊2日</span><span style="font-family:'Nunito',sans-serif;font-size:28px;color:var(--dark);font-weight:800">¥115,500〜</span>
+              <span style="font-size:15px;justify-self:start;display:inline-flex;align-items:center;justify-content:center;text-align:center;background:var(--rose-p);border:1px solid var(--rose-l);color:var(--rose-h);font-weight:500;border-radius:50%;width:84px;height:84px;line-height:1.35;white-space:normal;flex-shrink:0">2泊3日</span><span style="font-family:'Nunito',sans-serif;font-size:28px;color:var(--dark);font-weight:800">¥173,250〜</span>
             </div>
-            <p style="font-size:clamp(13px,1.2vw,16px);color:var(--light);margin-top:10px;white-space:nowrap;text-align:center">価格はすべて税込／3泊以上もご相談可能</p>
+            <p style="font-size:clamp(13px,1.2vw,16px);color:var(--light);margin-top:10px;white-space:nowrap;text-align:var(--pc-ta)">価格はすべて税込</p>
           </div>
-          <div style="display:flex;flex-direction:column;gap:8px;text-align:left">
+          <div style="display:flex;flex-direction:column;gap:8px;text-align:left;grid-column:var(--pc-c3);grid-row:var(--pc-r)">
             <div style="display:flex;gap:8px;font-size:17px;color:var(--mid)"><span style="color:var(--gold)">✓</span>日帰り旅行も対応</div>
+            <div style="display:flex;gap:8px;font-size:17px;color:var(--mid)"><span style="color:var(--gold)">✓</span>3泊以上もご相談可能</div>
             <div style="display:flex;gap:8px;font-size:17px;color:var(--mid)"><span style="color:var(--gold)">✓</span>宿泊旅行は別途出張手当</div>
           </div>
         </div>
-        <div style="border:2px solid var(--border);border-radius:24px;padding:36px 28px;text-align:center">
-          <p style="font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--rose-h);letter-spacing:3px;margin-bottom:12px">Home Visit</p>
-          <h3 style="font-size:var(--h3);font-weight:500;color:var(--dark);margin-bottom:20px">高齢者の見守りサービス</h3>
-          <div style="border-top:1px solid var(--border);padding-top:20px;margin-bottom:20px">
+        <div style="grid-column:var(--pc-last-col);justify-self:center;width:var(--pc-last-w);box-sizing:border-box;border:2px solid var(--border);border-radius:24px;padding:40px 44px;text-align:var(--pc-ta);display:grid;grid-template-columns:var(--pc-cols);column-gap:44px;align-items:center;align-content:start">
+          <p style="font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--rose-h);letter-spacing:3px;margin-bottom:12px;grid-column:var(--pc-c1);align-self:end">Home Visit</p>
+          <h3 style="font-size:var(--h3);font-weight:500;color:var(--dark);margin-bottom:var(--pc-hmb);grid-column:var(--pc-c1);align-self:start">高齢者の見守りサービス</h3>
+          <div style="border-top:var(--pc-bt);border-left:var(--pc-bl);padding:var(--pc-pp);margin-bottom:var(--pc-mb);grid-column:var(--pc-c2);grid-row:var(--pc-r)">
             <p style="font-size:30px;font-weight:300;color:var(--dark)">ご相談にてお見積り</p>
             <p style="font-size:16px;color:var(--light);margin-top:8px">訪問頻度・内容に応じてご案内</p>
           </div>
-          <div style="display:flex;flex-direction:column;gap:8px;text-align:left">
+          <div style="display:flex;flex-direction:column;gap:8px;text-align:left;grid-column:var(--pc-c3);grid-row:var(--pc-r)">
             <div style="display:flex;gap:8px;font-size:17px;color:var(--mid)"><span style="color:var(--gold)">✓</span>定期訪問・体調確認</div>
             <div style="display:flex;gap:8px;font-size:17px;color:var(--mid)"><span style="color:var(--gold)">✓</span>ご家族へのご報告も対応</div>
           </div>
