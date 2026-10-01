@@ -1041,6 +1041,7 @@ class Component extends DCLogic {
   taglineFull = '病気や障がいがあっても、「やりたい」を諦めない。';
 
   componentDidMount() {
+    try { if ('scrollRestoration' in window.history) window.history.scrollRestoration = 'manual'; } catch (e) {}
     this._pages = ['home','service','flow','pricing','faq','contact','profile','recruit','privacy'];
     const readHash = () => {
       const [pg, anchor] = decodeURIComponent((window.location.hash || '').replace(/^#/, '')).split('/');
@@ -1049,25 +1050,29 @@ class Component extends DCLogic {
     this._onPop = () => { const { pg, anchor } = readHash(); this.nav(pg, anchor, true); };
     window.addEventListener('popstate', this._onPop);
     window.addEventListener('hashchange', this._onPop);
-    { const { pg, anchor } = readHash();
-      if (pg !== 'home' || anchor) { this.nav(pg, anchor, true, true); }
-    }
+    const { pg: initPg, anchor: initAnchor } = readHash();
+    if (initPg !== 'home' || initAnchor) { this.nav(initPg, initAnchor, true, true); }
     this._onScroll = () => {
       this.setState({ showTop: window.scrollY > 400 });
       try { sessionStorage.setItem('scrollPos:' + this.state.page, String(window.scrollY)); } catch (e) {}
     };
     window.addEventListener('scroll', this._onScroll);
     try {
-      const saved = sessionStorage.getItem('scrollPos:' + this.state.page);
+      const saved = sessionStorage.getItem('scrollPos:' + initPg);
       if (saved) {
         const target = parseInt(saved, 10) || 0;
         const restore = () => window.scrollTo(0, target);
-        const attempt = () => { restore(); };
-        requestAnimationFrame(attempt);
-        setTimeout(attempt, 100);
-        setTimeout(attempt, 400);
-        setTimeout(attempt, 900);
-        window.addEventListener('load', attempt, { once: true });
+        restore();
+        requestAnimationFrame(restore);
+        setTimeout(restore, 50);
+        setTimeout(restore, 150);
+        setTimeout(restore, 300);
+        setTimeout(restore, 600);
+        setTimeout(restore, 1000);
+        setTimeout(restore, 1500);
+        document.addEventListener('readystatechange', restore);
+        window.addEventListener('load', restore, { once: true });
+        window.addEventListener('pageshow', restore);
       }
     } catch (e) {}
     window.addEventListener('beforeunload', () => {
