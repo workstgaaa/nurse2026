@@ -103,16 +103,16 @@
     --h1:62px;--h2:42px;--h3:24px;--body:19px;
     --hero-cols:minmax(0,1.35fr) minmax(0,1fr);--prof-cols:minmax(0,480px) minmax(0,1fr);--cred-ws:nowrap;--hero-p-ws:nowrap;--svc-cols:repeat(3,1fr);--v-cols:repeat(2,1fr);--price-cols:repeat(2,minmax(0,1fr));--pc-cols:1fr;--pc-c1:auto;--pc-c2:auto;--pc-c3:auto;--pc-r:auto;--pc-ta:center;--pc-bt:1px solid var(--border);--pc-bl:none;--pc-pp:20px 0 0;--pc-mb:20px;--pc-hmb:20px;--pc-jc:center;--pc-last-col:1 / -1;--pc-last-w:calc(50% - 12px);
     --nav-d:flex;--hbg-d:none;--topbar-d:flex;--hero-img-d:none;--hero-img-d-old:block;
-    --foot-cols:300px 1fr auto;
+    --foot-cols:300px 1fr auto;--foot-contact-row-dir:column;--foot-contact-w:220px;
     --rev-img:1;--rev-txt:2;
     --flow-line:block;--flow-dir:row;--flow-align:flex-start;--fi-dir:column;--fi-ta:center;--fi-gap:0;--fi-num-m:0 auto 16px;--fi-pad:0 12px;--fi-h3-mh:3em;
   }
-  @media(max-width:1200px){:root{--nav-d:none;--hbg-d:flex}}
-  @media(max-width:1040px){:root{--profile-img-max-w:260px;--cred-ws:normal;--prof-cols:minmax(0,1fr) minmax(0,2fr);--px:40px;--py:64px;--h1:52px;--h2:35px;--h3:22px;--body:18px;--price-cols:1fr;--pc-last-w:100%;--pc-cols:1fr;--pc-c1:auto;--pc-c2:auto;--pc-c3:auto;--pc-r:auto;--pc-ta:center;--pc-bt:1px solid var(--border);--pc-bl:none;--pc-pp:20px 0 0;--pc-mb:20px;--pc-hmb:20px;--pc-jc:center;--about-row-dir:column;--about-row-ta:center;--about-h2-fs:clamp(22px,4.2vw,32px);--about-h2-ws:nowrap;--flow-outer-d:grid;--flow-grid-cols:repeat(3,1fr);--flow-row-gap:50px;--flow-line:none;--foot-contact-d:flex;--foot-contact-mb:0;--foot-tagline-ws:nowrap;--foot-tagline-br:none;--foot-tagline-fs:15px;--foot-cols:1fr;--taxi-img-ar:3/4;--taxi-img-h:100%;--svc-title-ws:nowrap;--svc-img-ar-tablet:4/5;--svc-img-pos:40%;--svc-img-mh:220px;--svc-img-ar2:auto;--svc-img-maxh:220px;--svc-img-h2:220px;--svc-img-vpos:center}}
+  @media(max-width:1200px){:root{--nav-d:none;--hbg-d:flex;--topbar-d:flex;--tag-w:84px;--tag-h:68px;--tag-r:0 0 12px 12px;--htag-fs:13px;--tag-icon-px:20px;--tag-gap:0;--header-h:96px;--header-spacer-h:96px}}
+  @media(max-width:1040px){:root{--hbg-menu-btn-w:260px;--hero-p-fs:18px;--profile-img-max-w:260px;--cred-ws:normal;--prof-cols:minmax(0,1fr) minmax(0,2fr);--px:40px;--py:64px;--h1:52px;--h2:35px;--h3:22px;--body:18px;--price-cols:1fr;--pc-last-w:100%;--pc-cols:1fr;--pc-c1:auto;--pc-c2:auto;--pc-c3:auto;--pc-r:auto;--pc-ta:center;--pc-bt:1px solid var(--border);--pc-bl:none;--pc-pp:20px 0 0;--pc-mb:20px;--pc-hmb:20px;--pc-jc:center;--about-row-dir:column;--about-row-ta:center;--about-h2-fs:clamp(22px,4.2vw,32px);--about-h2-ws:nowrap;--flow-outer-d:grid;--flow-grid-cols:repeat(3,1fr);--flow-row-gap:50px;--flow-line:none;--foot-contact-d:flex;--foot-contact-mb:0;--foot-tagline-ws:nowrap;--foot-tagline-br:none;--foot-tagline-fs:15px;--foot-cols:1fr;--taxi-img-ar:3/4;--taxi-img-h:100%;--svc-title-ws:nowrap;--svc-img-ar-tablet:4/5;--svc-img-pos:40%;--svc-img-mh:220px;--svc-img-ar2:auto;--svc-img-maxh:220px;--svc-img-h2:220px;--svc-img-vpos:center}}
   @media(max-width:767px){:root{--cred-ws:normal;--prof-cols:1fr;--profile-img-max-w:440px;--cred-box-w:100%;--hero-p-ws:normal;--hero-ta:center;--hero-h1-ai:center;--hero-img-d:block;--hero-img-d-old:none;
-    --px:30px;--py:52px;--h1:37px;--h2:28px;--h3:20px;--body:18px;--svc-h3-fs:20px;--svc-h3-fw:600;--svc-h3-ws:normal;--svc-h3-ml:0;--flow-note-h3-ws:nowrap;--flow-note-pad:28px 10px;--flow-note-h3-fs:clamp(13px,4.3vw,19px);--flow-teaser-pad:10px;--flow-teaser-h3-fs:clamp(13px,4.3vw,18px);--flow-teaser-h3-ws:nowrap;--flow-teaser-p-fs:15px;--header-spacer-h:81px;--cancel-h4-ws:nowrap;--cancel-h4-fs:clamp(12px,4.3vw,18px);--foot-brand-fs:26px;--foot-tag-fs:11px;--svc-p-fs:16px;--svc-p-lh:1.9;--about-btn-d:none;--about-btn-mobile-d:block;--svc-title-ws:nowrap;--svc-img-desktop-d:none;--svc-img-mobile-d:block;--svc-li-ws:normal;--cta1-ws:nowrap;--cta1-fw:500;--contact-h2-ws:nowrap;--contact-h2-br-d:none;--foot-bottom-pad:70px;--foot-link-jc:flex-start;--foot-link-dir:column;--foot-link-ai:flex-start;--about-h2-fs:clamp(18px,6.2vw,28px);--about-h2-ws:nowrap;--cta1-gap:2px;--cta1-fs:19px;--flow-note-h3-ws:nowrap;--flow-note-p-fs:16px;--cancel-row-dir:row;--cancel-row-pl:0px;--cancel-row-gap:16px;--cancel-label-w:150px;--cancel-label-fs:13px;--cancel-val-fs:13px;--cancel-ws:nowrap;--pin-p-fs:17px;--profile-img-ar:3/1.3;--profile-img-pos:top;--cred-box-w:100%;--rep-name-ws:nowrap;--rep-btn-ta:center;--rep-name-fs:clamp(18px,6.5vw,26px);--cta0-fs:19px;--rep-mobile-name-d:block;--rep-desktop-label-d:none;--rep-desktop-name-d:none;--cred-fs:14px;--recruit-h3-ws:nowrap;--page-h1-fs:clamp(26px,8.5vw,36px);--page-h1-ws:nowrap;--faq-cta-ws:nowrap;
+    --px:30px;--py:52px;--h1:37px;--h2:28px;--h3:20px;--body:18px;--svc-h3-fs:20px;--svc-h3-fw:600;--svc-h3-ws:normal;--svc-h3-ml:0;--flow-note-h3-ws:nowrap;--flow-note-pad:28px 10px;--flow-note-h3-fs:clamp(13px,4.3vw,19px);--flow-teaser-pad:10px;--flow-teaser-h3-fs:clamp(13px,4.3vw,18px);--flow-teaser-h3-ws:nowrap;--flow-teaser-p-fs:15px;--header-spacer-h:64px;--cancel-h4-ws:nowrap;--cancel-h4-fs:clamp(12px,4.3vw,18px);--foot-brand-fs:28px;--foot-tag-fs:13px;--svc-p-fs:16px;--svc-p-lh:1.9;--about-btn-d:none;--about-btn-mobile-d:block;--svc-title-ws:nowrap;--svc-img-desktop-d:none;--svc-img-mobile-d:block;--svc-li-ws:normal;--cta1-ws:nowrap;--cta1-fw:500;--contact-h2-ws:nowrap;--contact-h2-br-d:none;--foot-bottom-pad:70px;--foot-link-jc:flex-start;--foot-link-dir:column;--foot-link-ai:flex-start;--about-h2-fs:clamp(18px,6.2vw,28px);--about-h2-ws:nowrap;--cta1-gap:2px;--cta1-fs:19px;--flow-note-h3-ws:nowrap;--flow-note-p-fs:16px;--cancel-row-dir:row;--cancel-row-pl:0px;--cancel-row-gap:16px;--cancel-label-w:150px;--cancel-label-fs:13px;--cancel-val-fs:13px;--cancel-ws:nowrap;--pin-p-fs:17px;--profile-img-ar:3/1.3;--profile-img-pos:top;--cred-box-w:100%;--rep-name-ws:nowrap;--rep-btn-ta:center;--rep-name-fs:clamp(18px,6.5vw,26px);--cta0-fs:19px;--rep-mobile-name-d:block;--rep-desktop-label-d:none;--rep-desktop-name-d:none;--cred-fs:14px;--recruit-h3-ws:nowrap;--page-h1-fs:clamp(26px,8.5vw,36px);--page-h1-ws:nowrap;--faq-cta-ws:nowrap;
     --hero-cols:1fr;--svc-cols:1fr;--price-cols:1fr;--v-cols:1fr;--pc-pad:24px 20px;--pc-cg:20px;--pc-price-fs:clamp(22px,7vw,32px);--pc-price-fs2:clamp(18px,5.5vw,24px);--pc-circle:64px;--pc-row-gap:14px;
-    --nav-d:none;--hbg-d:flex;--topbar-d:none;--hero-img-d:none;--hero-img-d-old:block;
+    --nav-d:none;--hbg-d:flex;--topbar-d:flex;--hero-img-d:none;--hero-img-d-old:block;--tag-w:54px;--tag-h:56px;--tag-r:0 0 10px 10px;--htag-fs:10px;--tag-icon-px:16px;--brand-fs:19px;--brand-tag-fs:9px;--header-h:84px;--header-spacer-h:84px;
     --foot-cols:1fr;--rev-img:2;--rev-txt:1;
     --flow-line:none;--flow-line-m:block;--flow-dir:column;--flow-align:stretch;--flow-outer-d:flex;--flow-grid-cols:none;--fi-dir:row;--fi-ta:left;--fi-gap:18px;--fi-num-m:0;--fi-pad:0;--fi-h3-mh:0;--est-h3-ws:nowrap;--est-br-d:none;--est-dot-d:inline;--cta-pt:90px;
   }}
@@ -134,13 +134,12 @@
 
 <!-- ══════════ HEADER ══════════ -->
 <div style="position:fixed;top:0;left:0;right:0;z-index:200;box-shadow:0 2px 16px rgba(45,30,26,0.07)">
-  <div style="background:var(--white);border-bottom:1px solid var(--border);padding:0 var(--px);display:flex;align-items:center;justify-content:space-between;height:81px">
-    <button onClick="{{ navHome }}" style="text-align:left;line-height:1.2">
-      <span style="font-family: 'Cormorant Garamond',serif; font-size: 26px; font-weight: 600; letter-spacing: 3px; display: block; background: linear-gradient(90deg,var(--rose-h) 0%,var(--rose) 40%,var(--rose-h) 60%,#c96f63 100%); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shimmerBtn 4s linear infinite">Lumileight</span>
-      <span style="font-size: 11px; color: var(--light); letter-spacing: 2.5px; display: block; margin-top: 3px; font-weight: 500">思いを叶える看護サービス</span>
-      <svg id="ribbon-underline" width="150" height="8" viewBox="0 0 150 8" fill="none" style="display:block;margin-top:2px;opacity:.8"><path d="M1 5 Q37 2 75 5 Q112 8 149 3" stroke="#c8a860" stroke-width="1.2" fill="none" stroke-linecap="round"></path></svg>
+  <div style="background:var(--white);border-bottom:1px solid var(--border);padding:0 0 0 16px;display:flex;align-items:stretch;justify-content:space-between;height:var(--header-h,96px);position:relative;gap:4px;max-width:100vw;overflow:hidden">
+    <button onClick="{{ navHome }}" style="text-align:left;line-height:1.2;flex-shrink:1;min-width:0;overflow:hidden;display:flex;flex-direction:column;justify-content:center">
+      <span style="font-family: 'Cormorant Garamond',serif; font-size: var(--brand-fs,26px); font-weight: 600; letter-spacing: 2px; display: block; background: linear-gradient(90deg,var(--rose-h) 0%,var(--rose) 40%,var(--rose-h) 60%,#c96f63 100%); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shimmerBtn 4s linear infinite;white-space:nowrap">Lumileight</span>
+      <span style="font-size: var(--brand-tag-fs,11px); color: var(--light); letter-spacing: 1.5px; display: var(--brand-tag-d,block); margin-top: 3px; font-weight: 500;white-space:nowrap">思いを叶える看護サービス</span>
     </button>
-    <nav style="display:var(--nav-d);align-items:center;gap:26px">
+    <nav style="display:var(--nav-d);align-items:center;gap:18px;flex:1;justify-content:flex-end;height:100%;margin-right:20px">
       <button onClick="{{ navHome }}" style="font-size:17px;white-space:nowrap;color:{{ ncHome }};border-bottom:{{ nbHome }};padding:4px 0" style-hover="color:var(--rose)">TOP</button>
       <button onClick="{{ navService }}" style="font-size:17px;white-space:nowrap;color:{{ ncSvc }};border-bottom:{{ nbSvc }};padding:4px 0" style-hover="color:var(--rose)">サービス</button>
       <button onClick="{{ navFlow }}" style="font-size:17px;white-space:nowrap;color:{{ ncFlow }};border-bottom:{{ nbFlow }};padding:4px 0" style-hover="color:var(--rose)">ご利用の流れ</button>
@@ -148,36 +147,43 @@
       <button onClick="{{ navProfile }}" style="font-size:17px;white-space:nowrap;color:{{ ncProf }};border-bottom:{{ nbProf }};padding:4px 0" style-hover="color:var(--rose)">会社概要</button>
       <button onClick="{{ navRecruit }}" style="font-size:17px;white-space:nowrap;color:{{ ncRecruit }};border-bottom:{{ nbRecruit }};padding:4px 0" style-hover="color:var(--rose)">採用情報</button>
       <button onClick="{{ navFaq }}" style="font-size:17px;white-space:nowrap;color:{{ ncFaq }};border-bottom:{{ nbFaq }};padding:4px 0" style-hover="color:var(--rose)">よくあるご質問</button>
-      <button onClick="{{ navContact }}" style="font-size:17px;color:var(--dark);background:#fff;border:1px solid var(--border);padding:9px 16px;border-radius:22px;display:flex;align-items:center;gap:6px;font-weight:500;transition:background .2s,color .2s" style-hover="background:var(--dark) !important;color:#fff !important;border-color:var(--dark) !important"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.04 2 11c0 2.76 1.28 5.23 3.3 6.97l-.8 2.93a.5.5 0 00.69.59l3.3-1.65C9.8 19.93 10.88 20 12 20c5.52 0 10-4.04 10-9S17.52 2 12 2z"></path></svg>LINEで相談</button>
-      <button onClick="{{ navContact }}" style="font-size: 15px; white-space:nowrap; color: #FFFFFF; padding: 10px 18px; border-radius: 24px; margin-left: 2px; background-color: #8A7065" style-hover="background:var(--rose-h)">お問い合わせ</button>
     </nav>
-    <button onClick="{{ toggleMenu }}" style="display:var(--hbg-d);flex-direction:column;gap:5px;padding:8px" style-hover="opacity:.7">
-      <span style="width:22px;height:1.5px;background:var(--dark);display:block;border-radius:1px"></span>
-      <span style="width:22px;height:1.5px;background:var(--dark);display:block;border-radius:1px"></span>
-      <span style="width:22px;height:1.5px;background:var(--dark);display:block;border-radius:1px"></span>
-    </button>
+    <div style="display:flex;align-items:center;gap:0;flex-shrink:0;margin-right:0">
+      <div style="display:var(--topbar-d);align-items:center;gap:4px">
+        <button onClick="{{ navContact }}" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;width:var(--tag-w,112px);height:var(--tag-h,76px);border-radius:var(--tag-r,0 0 16px 16px);background:var(--gold);color:#fff;font-size:var(--htag-fs,16px);font-weight:700;line-height:1.1;transition:filter .2s,transform .2s" style-hover="filter:brightness(1.08)"><svg width="var(--tag-icon,24)" height="var(--tag-icon,24)" viewBox="0 0 24 24" fill="currentColor" style="width:var(--tag-icon-px,24px);height:var(--tag-icon-px,24px)"><path d="M12 2C6.48 2 2 6.04 2 11c0 2.76 1.28 5.23 3.3 6.97l-.8 2.93a.5.5 0 00.69.59l3.3-1.65C9.8 19.93 10.88 20 12 20c5.52 0 10-4.04 10-9S17.52 2 12 2z"></path></svg>LINE<br>で相談</button>
+        <button onClick="{{ navContact }}" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;width:var(--tag-w,112px);height:var(--tag-h,76px);border-radius:var(--tag-r,0 0 16px 16px);background:var(--rose-h);color:#fff;font-size:var(--htag-fs,16px);font-weight:700;line-height:1.1;transition:filter .2s,transform .2s" style-hover="filter:brightness(1.08)"><svg width="var(--tag-icon,24)" height="var(--tag-icon,24)" viewBox="0 0 24 24" fill="currentColor" style="width:var(--tag-icon-px,24px);height:var(--tag-icon-px,24px)"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path></svg>お問い<br>合わせ</button>
+      </div>
+      <div style="display:var(--hbg-d);flex-direction:column;align-items:center;justify-content:center;gap:2px;width:var(--tag-w,76px);height:var(--tag-h,76px);border-radius:var(--tag-r,0 0 16px 16px);background:{{ hbgColor }};margin-left:4px;transition:background .2s">
+        <button onClick="{{ toggleMenu }}" style="display:flex;flex-direction:column;align-items:center;gap:4px;position:relative;width:22px;height:22px">
+          <span style="width:22px;height:1.5px;background:#fff;display:block;border-radius:1px;position:absolute;top:9px;transition:transform .25s,opacity .2s;transform:{{ menuBar1Transform }}"></span>
+          <span style="width:22px;height:1.5px;background:#fff;display:block;border-radius:1px;position:absolute;top:9px;opacity:{{ menuBar2Opacity }};transition:opacity .2s"></span>
+          <span style="width:22px;height:1.5px;background:#fff;display:block;border-radius:1px;position:absolute;top:9px;transition:transform .25s;transform:{{ menuBar3Transform }}"></span>
+        </button>
+        <span style="font-size:var(--htag-fs,16px);font-weight:700;color:#fff;line-height:1">MENU</span>
+      </div>
+    </div>
   </div>
 </div>
 
 <!-- Mobile Menu -->
 <sc-if value="{{ mobileOpen }}">
-  <div style="position:fixed;top:81px;left:0;right:0;z-index:199;background:var(--white);border-bottom:2px solid var(--rose-p);box-shadow:0 8px 16px rgba(45,30,26,0.08);animation:fadeIn .2s ease">
-    <button onClick="{{ navHome }}" style="display:block;width:100%;font-size:19px;color:var(--dark);border-bottom:1px solid var(--border);padding:15px var(--px);text-align:left" style-hover="color:var(--rose)">TOP</button>
-    <button onClick="{{ navService }}" style="display:block;width:100%;font-size:19px;color:var(--dark);border-bottom:1px solid var(--border);padding:15px var(--px);text-align:left" style-hover="color:var(--rose)">サービス</button>
-    <button onClick="{{ navFlow }}" style="display:block;width:100%;font-size:19px;color:var(--dark);border-bottom:1px solid var(--border);padding:15px var(--px);text-align:left" style-hover="color:var(--rose)">ご利用の流れ</button>
-    <button onClick="{{ navPricing }}" style="display:block;width:100%;font-size:19px;color:var(--dark);border-bottom:1px solid var(--border);padding:15px var(--px);text-align:left" style-hover="color:var(--rose)">料金</button>
-    <button onClick="{{ navProfile }}" style="display:block;width:100%;font-size:19px;color:var(--dark);border-bottom:1px solid var(--border);padding:15px var(--px);text-align:left" style-hover="color:var(--rose)">会社概要</button>
-    <button onClick="{{ navRecruit }}" style="display:block;width:100%;font-size:19px;color:var(--dark);border-bottom:1px solid var(--border);padding:15px var(--px);text-align:left" style-hover="color:var(--rose)">採用情報</button>
-    <button onClick="{{ navFaq }}" style="display:block;width:100%;font-size:19px;color:var(--dark);border-bottom:1px solid var(--border);padding:15px var(--px);text-align:left" style-hover="color:var(--rose)">よくあるご質問</button>
-    <div style="padding:16px var(--px);display:flex;flex-direction:column;gap:10px">
-      <button onClick="{{ navContact }}" style="width:100%;font-size:18px;color:var(--dark);background:#fff;border:1px solid var(--border);padding:12px;border-radius:8px;display:flex;align-items:center;justify-content:center;gap:8px;font-weight:500;transition:background .2s,color .2s" style-hover="background:var(--dark) !important;color:#fff !important;border-color:var(--dark) !important"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.04 2 11c0 2.76 1.28 5.23 3.3 6.97l-.8 2.93a.5.5 0 00.69.59l3.3-1.65C9.8 19.93 10.88 20 12 20c5.52 0 10-4.04 10-9S17.52 2 12 2z"></path></svg>LINEで相談</button>
-      <button onClick="{{ navContact }}" style="width:100%;font-size:19px;color:var(--white);background:var(--rose);padding:14px;border-radius:8px;position:relative;overflow:hidden" style-hover="background:var(--rose-h)" style-before="content:'';position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);transform:skewX(-20deg);animation:shimmerBtn 2.5s ease-in-out infinite">お問い合わせ</button>
+  <div style="position:fixed;top:var(--header-h,64px);left:0;right:0;z-index:199;background:var(--white);border-bottom:2px dashed var(--rose-p);box-shadow:0 8px 16px rgba(45,30,26,0.08);animation:fadeIn .2s ease">
+    <div style="padding:0 24px"><button onClick="{{ navHome }}" style="display:block;width:100%;font-size:19px;color:var(--dark);border-bottom:1px dashed var(--border);padding:15px 0;text-align:center" style-hover="color:var(--rose)">TOP</button></div>
+    <div style="padding:0 24px"><button onClick="{{ navService }}" style="display:block;width:100%;font-size:19px;color:var(--dark);border-bottom:1px dashed var(--border);padding:15px 0;text-align:center" style-hover="color:var(--rose)">サービス</button></div>
+    <div style="padding:0 24px"><button onClick="{{ navFlow }}" style="display:block;width:100%;font-size:19px;color:var(--dark);border-bottom:1px dashed var(--border);padding:15px 0;text-align:center" style-hover="color:var(--rose)">ご利用の流れ</button></div>
+    <div style="padding:0 24px"><button onClick="{{ navPricing }}" style="display:block;width:100%;font-size:19px;color:var(--dark);border-bottom:1px dashed var(--border);padding:15px 0;text-align:center" style-hover="color:var(--rose)">料金</button></div>
+    <div style="padding:0 24px"><button onClick="{{ navProfile }}" style="display:block;width:100%;font-size:19px;color:var(--dark);border-bottom:1px dashed var(--border);padding:15px 0;text-align:center" style-hover="color:var(--rose)">会社概要</button></div>
+    <div style="padding:0 24px"><button onClick="{{ navRecruit }}" style="display:block;width:100%;font-size:19px;color:var(--dark);border-bottom:1px dashed var(--border);padding:15px 0;text-align:center" style-hover="color:var(--rose)">採用情報</button></div>
+    <div style="padding:0 24px"><button onClick="{{ navFaq }}" style="display:block;width:100%;font-size:19px;color:var(--dark);border-bottom:1px dashed var(--border);padding:15px 0;text-align:center" style-hover="color:var(--rose)">よくあるご質問</button></div>
+    <div style="padding:16px var(--px);display:flex;flex-direction:column;align-items:center;gap:10px">
+      <button onClick="{{ navContact }}" style="width:var(--hbg-menu-btn-w,100%);font-size:18px;color:var(--dark);background:#fff;border:1px solid var(--border);padding:12px;border-radius:8px;display:flex;align-items:center;justify-content:center;gap:8px;font-weight:500;transition:background .2s,color .2s" style-hover="background:var(--dark) !important;color:#fff !important;border-color:var(--dark) !important"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.04 2 11c0 2.76 1.28 5.23 3.3 6.97l-.8 2.93a.5.5 0 00.69.59l3.3-1.65C9.8 19.93 10.88 20 12 20c5.52 0 10-4.04 10-9S17.52 2 12 2z"></path></svg>LINEで相談</button>
+      <button onClick="{{ navContact }}" style="width:var(--hbg-menu-btn-w,100%);font-size:19px;color:var(--white);background:var(--rose);padding:14px;border-radius:8px;position:relative;overflow:hidden" style-hover="background:var(--rose-h)" style-before="content:'';position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);transform:skewX(-20deg);animation:shimmerBtn 2.5s ease-in-out infinite">お問い合わせ</button>
     </div>
   </div>
 </sc-if>
 
 <!-- Header spacer -->
-<div style="height:var(--header-spacer-h,104px)"></div>
+<div style="height:var(--header-spacer-h,96px)"></div>
 
 <!-- ══════════ HOME ══════════ -->
 <sc-if value="{{ showHome }}" hint-placeholder-val="{{ true }}">
@@ -203,7 +209,7 @@
           </div>
         </div>
         <div style="width:52px;height:1px;background:var(--gold)"></div>
-        <p style="font-size:clamp(14px,1.3vw,19px);color:var(--mid);line-height:2.1;white-space:var(--hero-p-ws);text-wrap:pretty">病気や障がい、年齢、医療的ケアが必要であることを理由に、<br style="display:var(--hero-br-d,inline)"><span style="color:var(--rose-h);font-weight:600">行きたい・会いたい・帰りたい</span>を諦めてほしくない。<br style="display:var(--hero-br-d,inline)">看護師だからこそできる安心とサポートで、その人らしい時間を叶えます。</p>
+        <p style="font-size:var(--hero-p-fs,clamp(14px,1.3vw,19px));color:var(--mid);line-height:2.1;white-space:var(--hero-p-ws);text-wrap:pretty">病気や障がい、年齢、医療的ケアが必要であることを理由に、<br style="display:var(--hero-br-d,inline)"><span style="color:var(--rose-h);font-weight:600">行きたい・会いたい・帰りたい</span>を諦めてほしくない。<br style="display:var(--hero-br-d,inline)">看護師だからこそできる安心とサポートで、その人らしい時間を叶えます。</p>
         <div style="display:grid;grid-template-columns:repeat(2,max-content);column-gap:40px;row-gap:10px">
           <span style="font-size:var(--tag-fs,18px);color:var(--dark);display:flex;align-items:center;gap:5px;font-weight:500"><span style="color:var(--gold)">✓</span>看護師が付き添う</span>
           <span style="font-size:var(--tag-fs,18px);color:var(--dark);display:flex;align-items:center;gap:5px;font-weight:500"><span style="color:var(--gold)">✓</span>結婚式にも同行</span>
@@ -241,7 +247,7 @@
             <p style="font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--rose-h);letter-spacing:3px;margin-bottom:8px">Travel</p>
             <h3 style="font-size:var(--svc-h3-fs,clamp(15px,1.55vw,22px));font-weight:var(--svc-h3-fw,500);color:var(--dark);margin-bottom:12px;white-space:var(--svc-h3-ws,nowrap);letter-spacing:0;margin-left:var(--svc-h3-ml,-12px);margin-right:-12px">お出かけ・旅行同行サポート</h3>
             <p style="font-size:var(--svc-p-fs,18px);color:var(--mid);line-height:var(--svc-p-lh,2.0);margin-bottom:20px;flex:1">泊まりがけの旅行も安心してご一緒します。新幹線・飛行機にも対応。医療的ケアが必要な方もご相談ください。</p>
-            <button onClick="{{ navSvcTravel }}" style="font-size:17px;color:var(--rose);border-bottom:1px solid var(--rose);padding-bottom:2px" style-hover="color:var(--rose-h)">詳しく見る →</button>
+            <button onClick="{{ navSvcTravel }}" style="font-size:17px;font-weight:700;color:var(--rose-h);border-bottom:2px solid var(--rose-h);padding-bottom:2px" style-hover="color:var(--dark);border-color:var(--dark)">詳しく見る →</button>
           </div>
         </div>
         <div onClick="{{ navSvcTaxi }}" style="border:1px solid var(--border);border-radius:24px;overflow:hidden;transition:box-shadow .25s,transform .25s;cursor:pointer;display:flex;flex-direction:column" style-hover="box-shadow:0 10px 36px rgba(45,30,26,0.1);transform:translateY(-4px)">
@@ -250,7 +256,7 @@
             <p style="font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--rose-h);letter-spacing:3px;margin-bottom:8px">Transport</p>
             <h3 style="font-size:var(--svc-h3-fs,clamp(15px,1.55vw,22px));font-weight:var(--svc-h3-fw,500);color:var(--dark);margin-bottom:12px;white-space:var(--svc-h3-ws,nowrap);letter-spacing:0;margin-left:var(--svc-h3-ml,-12px);margin-right:-12px">介護タクシー・移動サポート</h3>
             <p style="font-size:var(--svc-p-fs,18px);color:var(--mid);line-height:var(--svc-p-lh,2.0);margin-bottom:20px;flex:1">移動手段の調整から当日の付き添いまで一貫して対応。ストレッチャー対応車両もご利用いただけます。</p>
-            <button onClick="{{ navSvcTaxi }}" style="font-size:17px;color:var(--rose);border-bottom:1px solid var(--rose);padding-bottom:2px" style-hover="color:var(--rose-h)">詳しく見る →</button>
+            <button onClick="{{ navSvcTaxi }}" style="font-size:17px;font-weight:700;color:var(--rose-h);border-bottom:2px solid var(--rose-h);padding-bottom:2px" style-hover="color:var(--dark);border-color:var(--dark)">詳しく見る →</button>
           </div>
         </div>
         <div onClick="{{ navSvcWatch }}" style="border:1px solid var(--border);border-radius:24px;overflow:hidden;transition:box-shadow .25s,transform .25s;cursor:pointer;display:flex;flex-direction:column" style-hover="box-shadow:0 10px 36px rgba(45,30,26,0.1);transform:translateY(-4px)">
@@ -259,7 +265,7 @@
             <p style="font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--rose-h);letter-spacing:3px;margin-bottom:8px">Home Visit</p>
             <h3 style="font-size:var(--svc-h3-fs,clamp(15px,1.55vw,22px));font-weight:var(--svc-h3-fw,500);color:var(--dark);margin-bottom:12px;white-space:var(--svc-h3-ws,nowrap);letter-spacing:0;margin-left:var(--svc-h3-ml,-12px);margin-right:-12px">高齢者の見守りサービス</h3>
             <p style="font-size:var(--svc-p-fs,18px);color:var(--mid);line-height:var(--svc-p-lh,2.0);margin-bottom:20px;flex:1">看護師が定期的に訪問し、体調やご様子を確認。常に見守れないご家族にかわって安心をお届けします。</p>
-            <button onClick="{{ navSvcWatch }}" style="font-size:17px;color:var(--rose);border-bottom:1px solid var(--rose);padding-bottom:2px" style-hover="color:var(--rose-h)">詳しく見る →</button>
+            <button onClick="{{ navSvcWatch }}" style="font-size:17px;font-weight:700;color:var(--rose-h);border-bottom:2px solid var(--rose-h);padding-bottom:2px" style-hover="color:var(--dark);border-color:var(--dark)">詳しく見る →</button>
           </div>
         </div>
       </div>
@@ -288,7 +294,7 @@
           <p style="font-size:18px;color:var(--rose);letter-spacing:2px;margin-bottom:8px">代表</p>
           <p style="font-size:26px;font-weight:500;color:var(--dark);margin-bottom:8px;font-family:'Zen Maru Gothic',sans-serif">城本 友香</p>
           <p style="font-size:20px;color:var(--mid);margin-bottom:14px">正看護師・保健師</p>
-          <button onClick="{{ navRepProfile }}" style="font-size:17px;color:var(--rose);border-bottom:1px solid var(--rose);padding-bottom:2px" style-hover="color:var(--rose-h)">代表プロフィールを見る →</button>
+          <button onClick="{{ navRepProfile }}" style="font-size:17px;font-weight:700;color:var(--rose-h);border-bottom:2px solid var(--rose-h);padding-bottom:2px" style-hover="color:var(--dark);border-color:var(--dark)">代表プロフィールを見る →</button>
         </div>
       </div>
     </div>
@@ -350,7 +356,7 @@
         <p style="font-size:var(--flow-teaser-p-fs,17px);color:var(--mid);line-height:1.85">直前でも臨機応変に対応しますが、旅行等に関しては、1ヶ月前までにご相談ください。転院搬送・長距離搬送、通院などはその限りではありません。</p>
       </div>
       <div style="text-align:center;margin-top:36px">
-        <button onClick="{{ navFlowMain }}" style="font-size:18px;color:var(--rose);border:1.5px solid var(--rose);padding:12px 28px;border-radius:24px" style-hover="background:var(--rose-p)">詳しい流れを見る</button>
+        <button onClick="{{ navFlowMain }}" style="font-size:18px;font-weight:700;color:#fff;background:var(--rose-h);border:2px solid var(--rose-h);padding:12px 28px;border-radius:24px" style-hover="background:var(--rose-p)">詳しい流れを見る</button>
       </div>
     </div>
   </section>
@@ -406,7 +412,7 @@
     <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-size:var(--cta1-fs,32px);font-weight:var(--cta1-fw,500);color:var(--white);margin-bottom:4px;letter-spacing:2px">まずはお気軽にご相談ください</h2>
     <p style="font-size:var(--cta1-fs,32px);font-weight:var(--cta1-fw,500);color:rgba(255,255,255,.85);line-height:1.3;margin-bottom:36px">ご相談は無料です</p>
     <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
-      <button onClick="{{ navContactMain }}" style="font-size:19px;color:var(--white);background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.4);padding:14px 28px;border-radius:28px;display:flex;align-items:center;gap:8px" style-hover="background:rgba(255,255,255,.22)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M22 6l-10 7L2 6"></path></svg>お問い合わせ</button>
+      <button onClick="{{ navContactMain }}" style="font-size:19px;font-weight:700;color:var(--rose-h);background:var(--white);border:none;padding:14px 28px;border-radius:28px;display:flex;align-items:center;gap:8px;box-shadow:0 6px 18px rgba(45,30,26,0.22)" style-hover="background:#f8f0ee"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M22 6l-10 7L2 6"></path></svg>お問い合わせ</button>
     </div>
   </section>
 </sc-if>
@@ -423,6 +429,7 @@
       <div>
         <p style="font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--rose-h);letter-spacing:3px;margin-bottom:12px">Travel</p>
         <h2 style="font-size:clamp(18px,3.6vw,28px);font-weight:700;color:var(--dark);margin-bottom:20px;line-height:1.4;white-space:var(--svc-title-ws,normal)">お出かけ・旅行同行サポート</h2>
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:20px"><div style="width:24px;height:1px;background:linear-gradient(90deg,transparent,#c8a860)"></div><svg width="7" height="7" viewBox="0 0 12 12" fill="#c8a860"><path d="M6 0 L7.1 4.9 L12 6 L7.1 7.1 L6 12 L4.9 7.1 L0 6 L4.9 4.9 Z"></path></svg><div style="width:24px;height:1px;background:linear-gradient(90deg,#c8a860,transparent)"></div></div>
         <div style="border-radius:20px;overflow:hidden;width:100%;height:clamp(190px,50vw,260px);margin-bottom:24px;display:var(--svc-img-mobile-d,none)"><img src="docs/旅行同行.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block"></div><div style="display:flex;align-items:center;gap:8px;margin-bottom:24px"><div style="width:24px;height:1px;background:linear-gradient(90deg,transparent,#c8a860)"></div><svg width="7" height="7" viewBox="0 0 12 12" fill="#c8a860" style="opacity:.7"><path d="M6 0 L7.1 4.9 L12 6 L7.1 7.1 L6 12 L4.9 7.1 L0 6 L4.9 4.9 Z"></path></svg><div style="width:24px;height:1px;background:linear-gradient(90deg,#c8a860,transparent)"></div></div>
         <p style="font-size:var(--body);color:var(--mid);line-height:2.1;margin-bottom:24px">療養中で旅行を諦めていた方でも、「出かけたい」という願いを実現するため、看護師が同行します。新幹線・飛行機での遠方旅行から、日帰りのお出かけまで対応可能です。</p>
         <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:32px">
@@ -443,8 +450,8 @@
       <div>
         <p style="font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--rose-h);letter-spacing:3px;margin-bottom:12px">Transport</p>
         <h2 style="font-size:clamp(18px,3.6vw,28px);font-weight:700;color:var(--dark);margin-bottom:20px;line-height:1.4;white-space:var(--svc-title-ws,normal)">介護タクシー・移動サポート</h2>
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:20px"><div style="width:24px;height:1px;background:linear-gradient(90deg,transparent,#c8a860)"></div><svg width="7" height="7" viewBox="0 0 12 12" fill="#c8a860"><path d="M6 0 L7.1 4.9 L12 6 L7.1 7.1 L6 12 L4.9 7.1 L0 6 L4.9 4.9 Z"></path></svg><div style="width:24px;height:1px;background:linear-gradient(90deg,#c8a860,transparent)"></div></div>
         <div style="border-radius:20px;overflow:hidden;aspect-ratio:16/9;margin-bottom:24px;display:var(--svc-img-mobile-d,none)"><img src="docs/介護タクシー.jpg" alt="" style="width:100%;height:100%;object-fit:cover"></div>
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:24px"><div style="width:24px;height:1px;background:linear-gradient(90deg,transparent,#c8a860)"></div><svg width="7" height="7" viewBox="0 0 12 12" fill="#c8a860" style="opacity:.7"><path d="M6 0 L7.1 4.9 L12 6 L7.1 7.1 L6 12 L4.9 7.1 L0 6 L4.9 4.9 Z"></path></svg><div style="width:24px;height:1px;background:linear-gradient(90deg,#c8a860,transparent)"></div></div>
         <p style="font-size:var(--body);color:var(--mid);line-height:2.1;margin-bottom:24px">車椅子やストレッチャーに対応した介護タクシーの調整から、当日の乗降サポートまで一貫して対応。移動中の体調管理も安心してお任せください。調整から付き添いまで、すべてワンストップで承ります。</p>
         <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:32px">
           <div style="display:flex;gap:12px"><span style="color:var(--rose);flex-shrink:0;margin-top:3px">✓</span><p style="font-size:clamp(11px,3.7vw,var(--body));color:var(--mid);line-height:1.75;white-space:var(--svc-li-ws,normal)">ストレッチャー・車椅子対応車両のご案内</p></div>
@@ -462,6 +469,7 @@
       <div>
         <p style="font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--rose-h);letter-spacing:3px;margin-bottom:12px">Home Visit</p>
         <h2 style="font-size:clamp(18px,3.6vw,28px);font-weight:700;color:var(--dark);margin-bottom:20px;line-height:1.4;white-space:var(--svc-title-ws,normal)">高齢者の見守りサービス</h2>
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:20px"><div style="width:24px;height:1px;background:linear-gradient(90deg,transparent,#c8a860)"></div><svg width="7" height="7" viewBox="0 0 12 12" fill="#c8a860"><path d="M6 0 L7.1 4.9 L12 6 L7.1 7.1 L6 12 L4.9 7.1 L0 6 L4.9 4.9 Z"></path></svg><div style="width:24px;height:1px;background:linear-gradient(90deg,#c8a860,transparent)"></div></div>
         <div style="border-radius:20px;overflow:hidden;width:100%;height:clamp(190px,50vw,260px);margin-bottom:24px;display:var(--svc-img-mobile-d,none)"><img src="docs/見守りサービス.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center 35%;display:block"></div><div style="display:flex;align-items:center;gap:8px;margin-bottom:24px"><div style="width:24px;height:1px;background:linear-gradient(90deg,transparent,#c8a860)"></div><svg width="7" height="7" viewBox="0 0 12 12" fill="#c8a860" style="opacity:.7"><path d="M6 0 L7.1 4.9 L12 6 L7.1 7.1 L6 12 L4.9 7.1 L0 6 L4.9 4.9 Z"></path></svg><div style="width:24px;height:1px;background:linear-gradient(90deg,#c8a860,transparent)"></div></div>
         <p style="font-size:var(--body);color:var(--mid);line-height:2.1;margin-bottom:24px">看護師が定期的にご自宅を訪問し、体調やご様子を確認します。ご家族が遠方にいる、日中は付きっきりで見守れないなど、常に様子を見ることが難しいご家庭に安心をお届けします。</p>
         <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:32px">
@@ -479,7 +487,7 @@
   <div style="background:linear-gradient(180deg,var(--white) 0%,var(--white) 4%,#fbefed 16%,#f6dcd8 28%,#eec0ba 42%,#e5ada6 58%,#d69990 74%,#c4867d 88%,#b5756c 100%);padding:var(--cta-pt,200px) var(--px) 72px;text-align:center">
     <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-size:var(--cta1-fs,32px);font-weight:var(--cta1-fw,500);color:var(--white);margin-bottom:4px;white-space:var(--cta1-ws,normal)">まずはお気軽にご相談ください</h2>
     <p style="font-size:var(--cta1-fs,32px);font-weight:var(--cta1-fw,500);color:rgba(255,255,255,.85);line-height:1.3;margin-bottom:28px">お見積りは無料です</p>
-    <button onClick="{{ navContact }}" style="font-size:19px;color:var(--rose);background:var(--white);padding:14px 32px;border-radius:28px" style-before="content:'';\ style-hover="background:#f8f0ee">お問い合わせはこちら</button>
+    <button onClick="{{ navContact }}" style="font-size:19px;font-weight:700;color:var(--rose-h);background:var(--white);padding:14px 32px;border-radius:28px;box-shadow:0 6px 18px rgba(45,30,26,0.22)" style-before="content:'';\ style-hover="background:#f8f0ee">お問い合わせはこちら</button>
   </div>
 </sc-if>
 
@@ -552,7 +560,7 @@
   
   <div style="background:linear-gradient(180deg,var(--white) 0%,var(--white) 4%,#fbefed 16%,#f6dcd8 28%,#eec0ba 42%,#e5ada6 58%,#d69990 74%,#c4867d 88%,#b5756c 100%);padding:var(--cta-pt,200px) var(--px) 72px;text-align:center">
     <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-size:var(--cta1-fs,32px);font-weight:var(--cta1-fw,500);color:var(--white);margin-bottom:28px;white-space:var(--cta1-ws,normal)">まずはお気軽にご相談ください</h2>
-    <button onClick="{{ navContact }}" style="font-size:19px;color:var(--rose);background:var(--white);padding:14px 32px;border-radius:28px" style-before="content:'';\ style-hover="background:#f8f0ee">お問い合わせはこちら</button>
+    <button onClick="{{ navContact }}" style="font-size:19px;font-weight:700;color:var(--rose-h);background:var(--white);padding:14px 32px;border-radius:28px;box-shadow:0 6px 18px rgba(45,30,26,0.22)" style-before="content:'';\ style-hover="background:#f8f0ee">お問い合わせはこちら</button>
   </div>
 </sc-if>
 
@@ -643,7 +651,7 @@
   
   <div style="background:linear-gradient(180deg,var(--white) 0%,var(--white) 4%,#fbefed 16%,#f6dcd8 28%,#eec0ba 42%,#e5ada6 58%,#d69990 74%,#c4867d 88%,#b5756c 100%);padding:var(--cta-pt,200px) var(--px) 72px;text-align:center">
     <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-size:var(--cta1-fs,32px);font-weight:var(--cta1-fw,500);color:var(--white);margin-bottom:28px;white-space:var(--cta1-ws,normal)">無料でお見積りします</h2>
-    <button onClick="{{ navContact }}" style="font-size:19px;color:var(--rose);background:var(--white);padding:14px 32px;border-radius:28px" style-before="content:'';\ style-hover="background:#f8f0ee">お問い合わせはこちら</button>
+    <button onClick="{{ navContact }}" style="font-size:19px;font-weight:700;color:var(--rose-h);background:var(--white);padding:14px 32px;border-radius:28px;box-shadow:0 6px 18px rgba(45,30,26,0.22)" style-before="content:'';\ style-hover="background:#f8f0ee">お問い合わせはこちら</button>
   </div>
 </sc-if>
 
@@ -754,7 +762,7 @@
   <div style="background:linear-gradient(180deg,var(--white) 0%,var(--white) 4%,#fbefed 16%,#f6dcd8 28%,#eec0ba 42%,#e5ada6 58%,#d69990 74%,#c4867d 88%,#b5756c 100%);padding:var(--cta-pt,200px) var(--px) 72px;text-align:center">
     <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-size:var(--cta1-fs,32px);font-weight:var(--cta1-fw,500);color:var(--white);margin-bottom:4px;line-height:1.3;white-space:var(--cta1-ws,normal)">他にご質問がありましたら</h2>
     <p style="font-family:'Zen Maru Gothic',sans-serif;font-size:var(--cta1-fs,32px);font-weight:var(--cta1-fw,500);color:var(--white);margin-bottom:28px;line-height:1.3;white-space:var(--cta1-ws,normal)">お気軽にお問い合わせください</p>
-    <button onClick="{{ navContact }}" style="font-size:19px;color:var(--rose);background:var(--white);padding:14px 32px;border-radius:28px" style-before="content:'';\ style-hover="background:#f8f0ee">お問い合わせはこちら</button>
+    <button onClick="{{ navContact }}" style="font-size:19px;font-weight:700;color:var(--rose-h);background:var(--white);padding:14px 32px;border-radius:28px;box-shadow:0 6px 18px rgba(45,30,26,0.22)" style-before="content:'';\ style-hover="background:#f8f0ee">お問い合わせはこちら</button>
   </div>
 </sc-if>
 
@@ -939,7 +947,7 @@
   
   <div style="background:linear-gradient(180deg,var(--white) 0%,var(--white) 4%,#fbefed 16%,#f6dcd8 28%,#eec0ba 42%,#e5ada6 58%,#d69990 74%,#c4867d 88%,#b5756c 100%);padding:var(--cta-pt,200px) var(--px) 72px;text-align:center">
     <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-size:var(--cta1-fs,30px);font-weight:var(--cta1-fw,500);color:var(--white);margin-bottom:12px;white-space:var(--cta1-ws,normal)">ご応募・お問い合わせはこちら</h2>
-    <button onClick="{{ navContact }}" style="font-size:19px;color:var(--rose);background:var(--white);padding:14px 32px;border-radius:28px" style-hover="background:#f8f0ee">お問い合わせはこちら</button>
+    <button onClick="{{ navContact }}" style="font-size:19px;font-weight:700;color:var(--rose-h);background:var(--white);padding:14px 32px;border-radius:28px;box-shadow:0 6px 18px rgba(45,30,26,0.22)" style-hover="background:#f8f0ee">お問い合わせはこちら</button>
   </div>
 </sc-if>
 
@@ -1010,10 +1018,10 @@
     </div>
     <div style="display:var(--foot-contact-d,block);flex-wrap:wrap;align-items:center;gap:14px 10px">
       <p style="font-size:15px;color:var(--rose);letter-spacing:2px;margin-bottom:16px">Contact</p>
-      <button onClick="{{ navContact }}" style="font-size:18px;color:var(--dark);background:#fff;border:1px solid #e5e5e5;padding:12px 24px;border-radius:24px;display:inline-flex;align-items:center;gap:8px;margin-bottom:var(--foot-contact-mb,14px);font-weight:500;transition:background .2s,color .2s" style-hover="background:var(--dark) !important;color:#fff !important;border-color:var(--dark) !important"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M2 7l10 6 10-6"></path></svg>お問い合わせ</button>
-      <div style="display:flex;flex-wrap:wrap;gap:10px">
-        <button onClick="{{ navContact }}" style="font-size:18px;color:var(--dark);background:#fff;border:1px solid #e5e5e5;padding:12px 24px;border-radius:24px;display:inline-flex;align-items:center;gap:8px;font-weight:500;transition:background .2s,color .2s" style-hover="background:var(--dark) !important;color:#fff !important;border-color:var(--dark) !important"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.04 2 11c0 2.76 1.28 5.23 3.3 6.97l-.8 2.93a.5.5 0 00.69.59l3.3-1.65C9.8 19.93 10.88 20 12 20c5.52 0 10-4.04 10-9S17.52 2 12 2z"></path></svg>LINEで相談する</button>
-        <a href="https://www.instagram.com/lumileight" target="_blank" rel="noopener noreferrer" style="font-size:18px;color:var(--dark);background:#fff;border:1px solid #e5e5e5;padding:12px 24px;border-radius:24px;display:inline-flex;align-items:center;gap:8px;font-weight:500;transition:background .2s,color .2s" style-hover="background:var(--dark) !important;color:#fff !important;border-color:var(--dark) !important"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>Instagram</a>
+      <button onClick="{{ navContact }}" style="font-size:18px;color:var(--dark);background:#fff;border:1px solid #e5e5e5;padding:12px 24px;border-radius:24px;display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:var(--foot-contact-mb,14px);font-weight:500;transition:background .2s,color .2s;width:var(--foot-contact-w,auto);height:52px;box-sizing:border-box" style-hover="background:var(--dark) !important;color:#fff !important;border-color:var(--dark) !important"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M2 7l10 6 10-6"></path></svg>お問い合わせ</button>
+      <div style="display:flex;flex-direction:var(--foot-contact-row-dir,row);flex-wrap:wrap;gap:10px">
+        <button onClick="{{ navContact }}" style="font-size:18px;color:var(--dark);background:#fff;border:1px solid #e5e5e5;padding:12px 24px;border-radius:24px;display:flex;align-items:center;justify-content:center;gap:8px;font-weight:500;transition:background .2s,color .2s;width:var(--foot-contact-w,auto);height:52px;box-sizing:border-box" style-hover="background:var(--dark) !important;color:#fff !important;border-color:var(--dark) !important"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.04 2 11c0 2.76 1.28 5.23 3.3 6.97l-.8 2.93a.5.5 0 00.69.59l3.3-1.65C9.8 19.93 10.88 20 12 20c5.52 0 10-4.04 10-9S17.52 2 12 2z"></path></svg>LINEで相談する</button>
+        <a href="https://www.instagram.com/lumileight" target="_blank" rel="noopener noreferrer" style="font-size:18px;color:var(--dark);background:#fff;border:1px solid #e5e5e5;padding:12px 24px;border-radius:24px;display:flex;align-items:center;justify-content:center;gap:8px;font-weight:500;transition:background .2s,color .2s;width:var(--foot-contact-w,auto);height:52px;box-sizing:border-box" style-hover="background:var(--dark) !important;color:#fff !important;border-color:var(--dark) !important"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>Instagram</a>
       </div>
     </div>
   </div>
@@ -1199,6 +1207,10 @@ class Component extends DCLogic {
       navRepProfile: () => this.nav('profile','rep-profile'), navFlowMain: () => this.nav('flow','flow-main'), navContactMain: () => this.nav('contact','contact-main'),
       toggleMenu: () => this.setState(s => ({ mobileOpen: !s.mobileOpen })),
       mobileOpen,
+      menuBar1Transform: mobileOpen ? 'rotate(45deg)' : 'translateY(-6px)',
+      menuBar2Opacity: mobileOpen ? 0 : 1,
+      menuBar3Transform: mobileOpen ? 'rotate(-45deg)' : 'translateY(6px)',
+      hbgColor: mobileOpen ? 'var(--dark)' : 'var(--rose-h)',
       showHome: page === 'home', showService: page === 'service',
       showFlow: page === 'flow', showPricing: page === 'pricing',
       showFaq: page === 'faq',
