@@ -8,7 +8,7 @@
 <body>
 <x-dc>
 <helmet data-dc-atomics="">
-<title>よくあるご質問｜Lumileight</title>
+<title>よくあるご質問｜看護師同行・介護タクシー｜Lumileight</title>
 <meta name="description" content="看護師同行・介護タクシーのよくあるご質問。寝たきりや車椅子での利用、酸素・吸引など医療処置が必要な場合、病院からの一時帰宅や長距離移動、料金、相談のタイミングなどにお答えします。">
 <meta property="og:description" content="看護師同行・介護タクシーのよくあるご質問。寝たきりや車椅子での利用、酸素・吸引など医療処置が必要な場合、病院からの一時帰宅や長距離移動、料金、相談のタイミングなどにお答えします。">
 <meta name="robots" content="noindex">
@@ -224,7 +224,7 @@
   <div style="background:linear-gradient(180deg,var(--white) 0%,var(--white) 4%,#fbefed 16%,#f6dcd8 28%,#eec0ba 42%,#e5ada6 58%,#d69990 74%,#c4867d 88%,#b5756c 100%);padding:var(--cta-pt,200px) var(--px) 72px;text-align:center">
     <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-size:var(--cta1-fs,32px);font-weight:var(--cta1-fw,500);color:var(--white);margin-bottom:4px;line-height:1.3;white-space:var(--cta1-ws,normal)">他にご質問がありましたら</h2>
     <p style="font-family:'Zen Maru Gothic',sans-serif;font-size:var(--cta1-fs,32px);font-weight:var(--cta1-fw,500);color:var(--white);margin-bottom:28px;line-height:1.3;white-space:var(--cta1-ws,normal)">お気軽にお問い合わせください</p>
-    <button onClick="{{ navContact }}" style="font-size:19px;font-weight:700;color:#5a3f33;background:linear-gradient(135deg,#f3d9a0 0%,#d5b06a 50%,#c89b4f 100%);padding:14px 32px;border-radius:28px;box-shadow:0 6px 18px rgba(45,30,26,0.22)" style-before="content:'';\ style-hover="background:#f8f0ee">お問い合わせはこちら</button>
+    <a href="contact.html" style="font-size:19px;font-weight:700;color:#5a3f33;background:linear-gradient(135deg,#f3d9a0 0%,#d5b06a 50%,#c89b4f 100%);padding:14px 32px;border-radius:28px;box-shadow:0 6px 18px rgba(45,30,26,0.22)" style-before="content:'';\ style-hover="background:#f8f0ee">お問い合わせはこちら</a>
   </div>
 
 
@@ -331,7 +331,9 @@ class Component extends DCLogic {
     };
     window.addEventListener('scroll', this._onScroll);
     try {
-      const saved = sessionStorage.getItem('scrollPos:' + initPg);
+      const navEntry = (performance.getEntriesByType && performance.getEntriesByType('navigation')[0]) || null;
+      const isReload = navEntry ? navEntry.type === 'reload' : (performance.navigation && performance.navigation.type === 1);
+      const saved = isReload ? sessionStorage.getItem('scrollPos:' + initPg) : null;
       if (saved) {
         const target = parseInt(saved, 10) || 0;
         const restore = () => window.scrollTo(0, target);

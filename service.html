@@ -8,7 +8,7 @@
 <body>
 <x-dc>
 <helmet data-dc-atomics="">
-<title>サービス詳細｜Lumileight</title>
+<title>看護師同行・介護タクシー・見守りのサービス内容｜Lumileight</title>
 <meta name="description" content="看護師が同行するお出かけ・旅行同行サポート、看護師が同乗できる介護タクシー・移動サポート、看護師による高齢者見守りサービスのご案内。酸素や点滴が必要な方の旅行や、転院・長距離搬送にも対応します。">
 <meta property="og:description" content="看護師が同行するお出かけ・旅行同行サポート、看護師が同乗できる介護タクシー・移動サポート、看護師による高齢者見守りサービスのご案内。酸素や点滴が必要な方の旅行や、転院・長距離搬送にも対応します。">
 <meta name="robots" content="noindex">
@@ -293,7 +293,9 @@ class Component extends DCLogic {
     };
     window.addEventListener('scroll', this._onScroll);
     try {
-      const saved = sessionStorage.getItem('scrollPos:' + initPg);
+      const navEntry = (performance.getEntriesByType && performance.getEntriesByType('navigation')[0]) || null;
+      const isReload = navEntry ? navEntry.type === 'reload' : (performance.navigation && performance.navigation.type === 1);
+      const saved = isReload ? sessionStorage.getItem('scrollPos:' + initPg) : null;
       if (saved) {
         const target = parseInt(saved, 10) || 0;
         const restore = () => window.scrollTo(0, target);

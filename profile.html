@@ -8,7 +8,7 @@
 <body>
 <x-dc>
 <helmet data-dc-atomics="">
-<title>会社概要｜Lumileight</title>
+<title>会社概要・代表プロフィール｜Lumileight</title>
 <meta name="description" content="合同会社Lumileightの会社概要と代表プロフィール。救急医療の経験をもつ正看護師・保健師の城本友香が、病気や障がいがあっても「やりたい」をあきらめないための看護サービスを提供しています。">
 <meta property="og:description" content="合同会社Lumileightの会社概要と代表プロフィール。救急医療の経験をもつ正看護師・保健師の城本友香が、病気や障がいがあっても「やりたい」をあきらめないための看護サービスを提供しています。">
 <meta name="robots" content="noindex">
@@ -305,7 +305,9 @@ class Component extends DCLogic {
     };
     window.addEventListener('scroll', this._onScroll);
     try {
-      const saved = sessionStorage.getItem('scrollPos:' + initPg);
+      const navEntry = (performance.getEntriesByType && performance.getEntriesByType('navigation')[0]) || null;
+      const isReload = navEntry ? navEntry.type === 'reload' : (performance.navigation && performance.navigation.type === 1);
+      const saved = isReload ? sessionStorage.getItem('scrollPos:' + initPg) : null;
       if (saved) {
         const target = parseInt(saved, 10) || 0;
         const restore = () => window.scrollTo(0, target);

@@ -8,7 +8,7 @@
 <body>
 <x-dc>
 <helmet data-dc-atomics="">
-<title>料金について｜Lumileight</title>
+<title>料金｜看護師同行・旅行パック・見守りプラン｜Lumileight</title>
 <meta name="description" content="看護師同行は1時間7,700円から。8時間パックや宿泊旅行のプラン、高齢者見守りサービスの月額プラン（5,500円から）、緊急時サポート、キャンセルポリシーをご案内します。お見積りは無料です。">
 <meta property="og:description" content="看護師同行は1時間7,700円から。8時間パックや宿泊旅行のプラン、高齢者見守りサービスの月額プラン（5,500円から）、緊急時サポート、キャンセルポリシーをご案内します。お見積りは無料です。">
 <meta name="robots" content="noindex">
@@ -352,7 +352,9 @@ class Component extends DCLogic {
     };
     window.addEventListener('scroll', this._onScroll);
     try {
-      const saved = sessionStorage.getItem('scrollPos:' + initPg);
+      const navEntry = (performance.getEntriesByType && performance.getEntriesByType('navigation')[0]) || null;
+      const isReload = navEntry ? navEntry.type === 'reload' : (performance.navigation && performance.navigation.type === 1);
+      const saved = isReload ? sessionStorage.getItem('scrollPos:' + initPg) : null;
       if (saved) {
         const target = parseInt(saved, 10) || 0;
         const restore = () => window.scrollTo(0, target);
