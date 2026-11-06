@@ -65,12 +65,12 @@
 <!-- ══════════ HEADER ══════════ -->
 <div style="position:fixed;top:0;left:0;right:0;z-index:200;box-shadow:0 2px 16px rgba(45,30,26,0.07)">
   <div style="background:var(--white);border-bottom:1px solid var(--border);padding:0 0 0 16px;display:flex;align-items:stretch;justify-content:space-between;height:var(--header-h,96px);position:relative;gap:4px;max-width:100vw;overflow:hidden">
-    <a href="index.html" style="text-align:left;line-height:1.2;flex-shrink:1;min-width:0;overflow:hidden;display:flex;flex-direction:column;justify-content:center">
+    <a href="./" style="text-align:left;line-height:1.2;flex-shrink:1;min-width:0;overflow:hidden;display:flex;flex-direction:column;justify-content:center">
       <span style="font-family: 'Cormorant Garamond',serif; font-size: var(--brand-fs,26px); font-weight: 600; letter-spacing: 2px; display: block; background: linear-gradient(90deg,var(--rose-h) 0%,var(--rose) 40%,var(--rose-h) 60%,#c96f63 100%); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shimmerBtn 4s linear infinite;white-space:nowrap">Lumileight</span>
       <span style="font-size: var(--brand-tag-fs,11px); color: var(--light); letter-spacing: 1.5px; display: var(--brand-tag-d,block); margin-top: 3px; font-weight: 500;white-space:nowrap"></span>
     </a>
     <nav style="display:var(--nav-d);align-items:center;gap:18px;flex:1;justify-content:flex-end;height:100%;margin-right:20px">
-      <a href="index.html" style="font-size:17px;white-space:nowrap;color:{{ ncHome }};border-bottom:{{ nbHome }};padding:4px 0" style-hover="color:var(--rose)">TOP</a>
+      <a href="./" style="font-size:17px;white-space:nowrap;color:{{ ncHome }};border-bottom:{{ nbHome }};padding:4px 0" style-hover="color:var(--rose)">TOP</a>
       <a href="service.html" style="font-size:17px;white-space:nowrap;color:{{ ncSvc }};border-bottom:{{ nbSvc }};padding:4px 0" style-hover="color:var(--rose)">サービス</a>
       <a href="flow.html" style="font-size:17px;white-space:nowrap;color:{{ ncFlow }};border-bottom:{{ nbFlow }};padding:4px 0" style-hover="color:var(--rose)">ご利用の流れ</a>
       <a href="pricing.html" style="font-size:17px;white-space:nowrap;color:{{ ncPrice }};border-bottom:{{ nbPrice }};padding:4px 0" style-hover="color:var(--rose)">料金</a>
@@ -99,7 +99,7 @@
 <!-- Mobile Menu -->
 <sc-if value="{{ mobileOpen }}">
   <div style="position:fixed;top:var(--header-h,64px);left:0;right:0;z-index:199;background:var(--white);border-bottom:2px dashed var(--rose-p);box-shadow:0 8px 16px rgba(45,30,26,0.08);animation:fadeIn .2s ease">
-    <div style="padding:0 24px"><a href="index.html" style="display:block;width:100%;font-size:19px;color:var(--dark);border-bottom:1px dashed var(--border);padding:15px 0;text-align:center" style-hover="color:var(--rose)">TOP</a></div>
+    <div style="padding:0 24px"><a href="./" style="display:block;width:100%;font-size:19px;color:var(--dark);border-bottom:1px dashed var(--border);padding:15px 0;text-align:center" style-hover="color:var(--rose)">TOP</a></div>
     <div style="padding:0 24px"><a href="service.html" style="display:block;width:100%;font-size:19px;color:var(--dark);border-bottom:1px dashed var(--border);padding:15px 0;text-align:center" style-hover="color:var(--rose)">サービス</a></div>
     <div style="padding:0 24px"><a href="flow.html" style="display:block;width:100%;font-size:19px;color:var(--dark);border-bottom:1px dashed var(--border);padding:15px 0;text-align:center" style-hover="color:var(--rose)">ご利用の流れ</a></div>
     <div style="padding:0 24px"><a href="pricing.html" style="display:block;width:100%;font-size:19px;color:var(--dark);border-bottom:1px dashed var(--border);padding:15px 0;text-align:center" style-hover="color:var(--rose)">料金</a></div>
@@ -259,7 +259,7 @@
   <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="position:absolute;top:-59px;left:0;width:100%;height:60px;display:block"><path d="M0,0 Q720,90 1440,0 L1440,60 L0,60 Z" fill="var(--cream2)"></path></svg>
   <div style="max-width:var(--c);margin:0 auto;display:grid;grid-template-columns:var(--foot-cols);gap:48px;padding-bottom:48px;border-bottom:1px solid var(--border)">
     <div style="display:var(--foot-brand-d,block);text-align:var(--foot-brand-ta,left)">
-      <a href="index.html" style="text-align:var(--foot-brand-ta,left);margin-bottom:16px;line-height:1.3">
+      <a href="./" style="text-align:var(--foot-brand-ta,left);margin-bottom:16px;line-height:1.3">
         <span style="font-family:'Cormorant Garamond',serif;font-size:var(--foot-brand-fs,22px);font-weight:500;color:var(--rose-h);letter-spacing:3px;display:block;white-space:nowrap">Lumileight</span>
       </a>
       <p style="font-size:var(--foot-tagline-fs,17px);color:var(--mid);line-height:1.85;display:var(--foot-tagline-d,block);white-space:var(--foot-tagline-ws,normal)">看護師が同行し、安心して<span style="display:var(--foot-tagline-br,inline)"><br></span>「その日」を迎えられるよう<span style="display:var(--foot-tagline-br,inline)"><br></span>お手伝いします。</p>
