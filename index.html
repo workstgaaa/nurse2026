@@ -637,6 +637,7 @@ class Component extends DCLogic {
     if (initPg !== 'home' || initAnchor) { this.nav(initPg, initAnchor, true, true); }
     this._onScroll = () => {
       this.setState({ showTop: window.scrollY > 400 });
+      if (this._suppressScrollSave) return;
       try { sessionStorage.setItem('scrollPos:' + this.state.page, String(window.scrollY)); } catch (e) {}
     };
     window.addEventListener('scroll', this._onScroll);
@@ -728,13 +729,19 @@ class Component extends DCLogic {
     this.setState({ page: p, mobileOpen: false }, () => {
       try { sessionStorage.setItem('currentPage', p); } catch (e) {}
       if (skipScroll) return;
-      if (!anchor) { window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
+      this._suppressScrollSave = true;
+      if (!anchor) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        setTimeout(() => { this._suppressScrollSave = false; }, 700);
+        return;
+      }
       const go = (tries) => {
         const el = document.getElementById(anchor);
-        if (!el) { if (tries > 0) setTimeout(() => go(tries - 1), 50); return; }
+        if (!el) { if (tries > 0) setTimeout(() => go(tries - 1), 50); else this._suppressScrollSave = false; return; }
         const header = document.querySelector('header');
         const off = (header ? header.getBoundingClientRect().height : 90) + 16;
         window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - off, behavior: 'auto' });
+        this._suppressScrollSave = false;
       };
       setTimeout(() => go(10), 30);
     });
