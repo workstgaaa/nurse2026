@@ -607,16 +607,7 @@
     }
   });
 
-  var heroA = document.querySelectorAll('.hero-photoa');
-  var heroB = document.querySelectorAll('.hero-photob');
-  var slide = 0;
-  if (heroA.length) {
-    setInterval(function(){
-      slide = (slide + 1) % heroA.length;
-      heroA.forEach(function(el, i){ el.style.opacity = i === slide ? '1' : '0'; });
-      heroB.forEach(function(el, i){ el.style.opacity = i === slide ? '1' : '0'; });
-    }, 4500);
-  }
+  document.querySelectorAll('.hero-photoa, .hero-photob').forEach(function(el){ el.style.opacity = '1'; });
 })();
 </script>
 </body>
