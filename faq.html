@@ -342,7 +342,8 @@ class Component extends DCLogic {
       const saved = isReload ? sessionStorage.getItem('scrollPos:' + initPg) : null;
       if (saved) {
         const target = parseInt(saved, 10) || 0;
-        const restore = () => window.scrollTo(0, target);
+        const clamp = () => Math.min(target, Math.max(0, document.documentElement.scrollHeight - window.innerHeight));
+        const restore = () => window.scrollTo(0, clamp());
         restore();
         requestAnimationFrame(restore);
         setTimeout(restore, 50);
