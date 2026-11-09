@@ -286,46 +286,19 @@ class Component extends DCLogic {
 
   componentDidMount() {
     try { if ('scrollRestoration' in window.history) window.history.scrollRestoration = 'manual'; } catch (e) {}
-    this._pages = ['home','service','flow','pricing','faq','contact','profile','recruit','privacy'];
-    const readHash = () => {
-      const [pg, anchor] = decodeURIComponent((window.location.hash || '').replace(/^#/, '')).split('/');
-      return { pg: this._pages.includes(pg) ? pg : 'home', anchor };
-    };
-    this._onPop = () => { const { pg, anchor } = readHash(); this.nav(pg, anchor, true); };
-    window.addEventListener('popstate', this._onPop);
-    window.addEventListener('hashchange', this._onPop);
-    const { pg: initPg, anchor: initAnchor } = readHash();
-    if (initPg !== 'home' || initAnchor) { this.nav(initPg, initAnchor, true, true); }
-    this._onScroll = () => {
-      this.setState({ showTop: window.scrollY > 400 });
-      if (this._suppressScrollSave) return;
-      try { sessionStorage.setItem('scrollPos:' + this.state.page, String(window.scrollY)); } catch (e) {}
-    };
+    const anchor = decodeURIComponent((window.location.hash || '').replace(/^#\/?/, ''));
+    if (anchor) {
+      const go = (tries) => {
+        const el = document.getElementById(anchor);
+        if (!el) { if (tries > 0) setTimeout(() => go(tries - 1), 80); return; }
+        const header = document.querySelector('header');
+        const off = (header ? header.getBoundingClientRect().height : 90) + 16;
+        window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - off, behavior: 'auto' });
+      };
+      setTimeout(() => go(15), 30);
+    }
+    this._onScroll = () => { this.setState({ showTop: window.scrollY > 400 }); };
     window.addEventListener('scroll', this._onScroll);
-    try {
-      const navEntry = (performance.getEntriesByType && performance.getEntriesByType('navigation')[0]) || null;
-      const isReload = navEntry ? navEntry.type === 'reload' : (performance.navigation && performance.navigation.type === 1);
-      const saved = isReload ? sessionStorage.getItem('scrollPos:' + initPg) : null;
-      if (saved) {
-        const target = parseInt(saved, 10) || 0;
-        const clamp = () => Math.min(target, Math.max(0, document.documentElement.scrollHeight - window.innerHeight));
-        const restore = () => window.scrollTo(0, clamp());
-        restore();
-        requestAnimationFrame(restore);
-        setTimeout(restore, 50);
-        setTimeout(restore, 150);
-        setTimeout(restore, 300);
-        setTimeout(restore, 600);
-        setTimeout(restore, 1000);
-        setTimeout(restore, 1500);
-        document.addEventListener('readystatechange', restore);
-        window.addEventListener('load', restore, { once: true });
-        window.addEventListener('pageshow', restore);
-      }
-    } catch (e) {}
-    window.addEventListener('beforeunload', () => {
-      try { sessionStorage.setItem('scrollPos:' + this.state.page, String(window.scrollY)); } catch (e) {}
-    });
     this._heroTimer = setInterval(() => {
       this.setState(s => ({ heroSlide: (s.heroSlide + 1) % this.heroImages.length }));
     }, 4500);
@@ -343,14 +316,12 @@ class Component extends DCLogic {
     this.applyMood();
   }
 
-  componentDidUpdate() {
+  componentDidUpdate() {componentDidUpdate() {
     this.applyMood();
   }
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this._onScroll);
-    window.removeEventListener('popstate', this._onPop);
-    window.removeEventListener('hashchange', this._onPop);
     clearInterval(this._taglineTimer);
     clearInterval(this._heroTimer);
   }
@@ -379,36 +350,23 @@ class Component extends DCLogic {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  nav(p, anchor, fromHistory, skipScroll) {
-    if (!fromHistory) {
-      const hash = p === 'home' ? '' : '#' + p + (anchor ? '/' + anchor : '');
-      try {
-        const url = window.location.pathname + window.location.search + hash;
-        if (url !== window.location.pathname + window.location.search + window.location.hash) window.history.pushState(null, '', url);
-      } catch (e) {}
-    }
-    this.setState({ page: p, mobileOpen: false }, () => {
-      try { sessionStorage.setItem('currentPage', p); } catch (e) {}
-      if (skipScroll) return;
-      this._suppressScrollSave = true;
-      if (!anchor) {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        setTimeout(() => { this._suppressScrollSave = false; }, 700);
-        return;
-      }
+  nav(p, anchor) {
+    if (anchor) {
       const go = (tries) => {
         const el = document.getElementById(anchor);
-        if (!el) { if (tries > 0) setTimeout(() => go(tries - 1), 50); else this._suppressScrollSave = false; return; }
+        if (!el) { if (tries > 0) setTimeout(() => go(tries - 1), 50); return; }
         const header = document.querySelector('header');
         const off = (header ? header.getBoundingClientRect().height : 90) + 16;
         window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - off, behavior: 'auto' });
-        this._suppressScrollSave = false;
       };
-      setTimeout(() => go(10), 30);
-    });
+      go(10);
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    this.setState({ mobileOpen: false });
   }
 
-  toggleFaq(i) {
+  toggleFaq(i) {toggleFaq(i) {
     this.setState(s => ({ faqOpen: s.faqOpen === i ? -1 : i }));
   }
 
