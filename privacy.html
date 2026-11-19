@@ -14,8 +14,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=Zen+Maru+Gothic:wght@400;500;700&amp;family=Zen+Old+Mincho:wght@400;500;600;700&amp;family=Nunito:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
 <style>
   *,*::before,*::after{box-sizing:border-box}
-  html,body{margin:0;padding:0;scroll-behavior:smooth}
-  body{font-family:'Zen Maru Gothic','Georgia',sans-serif;color:#2d1e1a;background:#f1ded8;-webkit-font-smoothing:antialiased;line-height:1.85}
+  html,body{margin:0;padding:0;scroll-behavior:smooth;overflow-x:hidden;max-width:100%}
+  body{font-family:'Zen Old Mincho','Georgia',serif;color:#4a3d38;background:#f1ded8;-webkit-font-smoothing:antialiased;line-height:1.9;letter-spacing:0.02em}
   h1,h2,h3,h4,p,ul,ol{margin:0}
   a{color:inherit;text-decoration:none}
   button{font-family:inherit;cursor:pointer;border:none;background:none;padding:0}
@@ -72,10 +72,7 @@
 <!-- ══════════ HEADER ══════════ -->
 <div style="position:fixed;top:0;left:0;right:0;z-index:200;box-shadow:0 2px 16px rgba(45,30,26,0.07)">
   <div style="background:var(--white);border-bottom:1px solid var(--border);padding:0 0 0 16px;display:flex;align-items:stretch;justify-content:space-between;height:var(--header-h,96px);position:relative;gap:4px;max-width:100vw;overflow:hidden">
-    <a href="./" style="text-align:left;line-height:1.2;flex-shrink:1;min-width:0;overflow:hidden;display:flex;flex-direction:column;justify-content:center">
-      <span style="font-family: 'Cormorant Garamond',serif; font-size: var(--brand-fs,26px); font-weight: 600; letter-spacing: 2px; display: block; background: linear-gradient(90deg,var(--rose-h) 0%,var(--rose) 40%,var(--rose-h) 60%,#c96f63 100%); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shimmerBtn 4s linear infinite;white-space:nowrap">Lumileight</span>
-      <span style="font-size: var(--brand-tag-fs,11px); color: var(--light); letter-spacing: 1.5px; display: var(--brand-tag-d,block); margin-top: 3px; font-weight: 500;white-space:nowrap"></span>
-    </a>
+    <a href="./" style="text-align:left;line-height:1.2;flex-shrink:1;min-width:0;overflow:hidden;display:flex;flex-direction:column;justify-content:center;height:100%;padding:8px 0"><img src="docs/lumileight-logo.png" alt="Lumileight" style="height:100%;max-height:72px;width:auto;object-fit:contain"></a>
     <nav style="display:var(--nav-d);align-items:center;gap:18px;flex:1;justify-content:flex-end;height:100%;margin-right:20px">
       <a href="./" style="font-size:17px;white-space:nowrap;color:#7a6055;border-bottom:2px solid transparent;padding:1px 0" style-hover="color:var(--rose)">TOP</a>
       <a href="service.html" style="font-size:17px;white-space:nowrap;color:#7a6055;border-bottom:2px solid transparent;padding:1px 0" style-hover="color:var(--rose)">サービス</a>
@@ -85,11 +82,9 @@
       <a href="recruit.html" style="font-size:17px;white-space:nowrap;color:#7a6055;border-bottom:2px solid transparent;padding:1px 0" style-hover="color:var(--rose)">採用情報</a>
       <a href="faq.html" style="font-size:17px;white-space:nowrap;color:#7a6055;border-bottom:2px solid transparent;padding:1px 0" style-hover="color:var(--rose)">よくあるご質問</a>
     </nav>
-    <div style="display:flex;align-items:stretch;gap:0;flex-shrink:0;margin-right:0">
-      <div style="display:var(--topbar-d);align-items:stretch;gap:4px">
-        <a href="contact.html" class="shimmer-1" style="position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;width:var(--tag-w,112px);height:calc(100% - 6px);border-radius:var(--tag-r,0 0 16px 16px);background:var(--gold);color:#fff;font-size:var(--htag-fs,16px);font-weight:700;line-height:1.1;text-align:center;transition:filter .2s,transform .2s" style-hover="filter:brightness(1.08)"><svg width="var(--tag-icon,24)" height="var(--tag-icon,24)" viewBox="0 0 24 24" fill="currentColor" style="width:var(--tag-icon-px,24px);height:var(--tag-icon-px,24px)"><path d="M12 2C6.48 2 2 6.04 2 11c0 2.76 1.28 5.23 3.3 6.97l-.8 2.93a.5.5 0 00.69.59l3.3-1.65C9.8 19.93 10.88 20 12 20c5.52 0 10-4.04 10-9S17.52 2 12 2z"></path></svg><span style="display:block;width:100%;text-align:center">LINE<br>で相談</span></a>
-        <a href="contact.html" class="shimmer-2" style="position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;width:var(--tag-w,112px);height:calc(100% - 6px);border-radius:var(--tag-r,0 0 16px 16px);background:#e8818f;color:#fff;font-size:var(--htag-fs,16px);font-weight:700;line-height:1.1;text-align:center;margin-left:4px;transition:filter .2s,transform .2s" style-hover="filter:brightness(1.08)"><svg width="var(--tag-icon,24)" height="var(--tag-icon,24)" viewBox="0 0 24 24" fill="currentColor" style="width:var(--tag-icon-px,24px);height:var(--tag-icon-px,24px)"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path></svg><span style="display:block;width:100%;text-align:center">お問い<br>合わせ</span></a>
-        <a href="https://www.instagram.com/lumileight" target="_blank" rel="noopener noreferrer" aria-label="Instagramでお出かけ事例を見る" class="shimmer-3" style="position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;width:var(--tag-w,112px);height:calc(100% - 6px);border-radius:var(--tag-r,0 0 16px 16px);background:#8a7065;color:#fff;font-size:var(--htag-fs,16px);font-weight:700;line-height:1.1;margin-left:4px;transition:filter .2s,transform .2s" style-hover="filter:brightness(1.3)"><svg width="var(--tag-icon,24)" height="var(--tag-icon,24)" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:var(--tag-icon-px,24px);height:var(--tag-icon-px,24px)"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>Instagram</a>
+    <div style="display:flex;align-items:center;gap:0;flex-shrink:0;margin-right:0">
+      <div style="display:var(--topbar-d);align-items:center;gap:4px">
+        <a href="contact.html" style="white-space:nowrap;display:flex;align-items:center;gap:8px;font-size:15px;font-weight:700;color:#fff;background:#e8818f;padding:0 20px;height:36px;border-radius:30px;box-shadow:0 4px 14px rgba(180,100,90,0.3)" style-hover="filter:brightness(1.08)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M2 6l10 7 10-7"></path></svg>無料相談・お問い合わせ</a>
       </div>
       <div id="hbg" style="display:var(--hbg-d);flex-direction:column;align-items:center;justify-content:center;gap:2px;width:var(--tag-w,76px);height:calc(100% - 6px);border-radius:var(--tag-r,0 0 16px 16px);background:var(--rose-h);margin-left:4px;transition:background .2s">
         <button id="menu-toggle-btn" style="display:flex;flex-direction:column;align-items:center;gap:4px;position:relative;width:22px;height:22px">
@@ -113,8 +108,9 @@
     <div style="padding:0 24px"><a href="recruit.html" style="display:block;width:100%;font-size:19px;color:var(--dark);border-bottom:1px dashed var(--border);padding:15px 0;text-align:center" style-hover="color:var(--rose)">採用情報</a></div>
     <div style="padding:0 24px"><a href="faq.html" style="display:block;width:100%;font-size:19px;color:var(--dark);border-bottom:1px dashed var(--border);padding:15px 0;text-align:center" style-hover="color:var(--rose)">よくあるご質問</a></div>
     <div style="padding:16px var(--px);display:flex;flex-direction:column;align-items:center;gap:10px">
-      <a href="contact.html" style="width:var(--hbg-menu-btn-w,100%);font-size:18px;color:var(--dark);background:#fff;border:1px solid var(--border);padding:12px;border-radius:8px;display:flex;align-items:center;justify-content:center;gap:8px;font-weight:500;transition:background .2s,color .2s" style-hover="background:var(--dark) !important;color:#fff !important;border-color:var(--dark) !important"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.04 2 11c0 2.76 1.28 5.23 3.3 6.97l-.8 2.93a.5.5 0 00.69.59l3.3-1.65C9.8 19.93 10.88 20 12 20c5.52 0 10-4.04 10-9S17.52 2 12 2z"></path></svg>LINEで相談</a>
-      <a href="contact.html" class="shimmer-4" style="width:var(--hbg-menu-btn-w,100%);font-size:19px;color:var(--white);background:var(--rose);padding:14px;border-radius:8px;position:relative;overflow:hidden" style-hover="background:var(--rose-h)">お問い合わせ</a>
+      <a href="tel:0359699278" style="width:var(--hbg-menu-btn-w,100%);font-size:18px;color:var(--dark);background:#fff;border:1px solid var(--border);padding:12px;border-radius:8px;display:flex;align-items:center;justify-content:center;gap:8px;font-weight:500;transition:background .2s,color .2s;box-sizing:border-box" style-hover="background:var(--dark) !important;color:#fff !important;border-color:var(--dark) !important"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.7 3.6 5 6.3 6.3l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1l-2.3 2.3z"></path></svg>03-5969-9278</a>
+      <a href="https://lin.ee/xno96J9" target="_blank" rel="noopener noreferrer" style="width:var(--hbg-menu-btn-w,100%);font-size:18px;color:var(--dark);background:#fff;border:1px solid var(--border);padding:12px;border-radius:8px;display:flex;align-items:center;justify-content:center;gap:8px;font-weight:500;transition:background .2s,color .2s;box-sizing:border-box" style-hover="background:var(--dark) !important;color:#fff !important;border-color:var(--dark) !important"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.04 2 11c0 2.76 1.28 5.23 3.3 6.97l-.8 2.93a.5.5 0 00.69.59l3.3-1.65C9.8 19.93 10.88 20 12 20c5.52 0 10-4.04 10-9S17.52 2 12 2z"></path></svg>LINEで相談</a>
+      <a href="contact.html" style="width:var(--hbg-menu-btn-w,100%);font-size:19px;color:var(--white);background:var(--rose);padding:14px;border-radius:8px;text-align:center;display:block" style-hover="background:var(--rose-h)">お問い合わせ</a>
     </div>
   </div>
 
@@ -127,16 +123,15 @@
 </button>
 
 <!-- ══════════ PRIVACY ══════════ -->
-
   <div style="background:linear-gradient(160deg,var(--cream) 0%,var(--rose-p) 60%,var(--rose-l) 100%);padding:72px var(--px) 88px;text-align:center;position:relative;overflow:hidden"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="position:absolute;bottom:0;left:0;width:100%;height:60px;display:block;pointer-events:none"><path d="M0,0 Q720,90 1440,0 L1440,60 L0,60 Z" fill="var(--white)"></path></svg>
-    <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:14px"><div style="width:44px;height:1px;background:var(--rose-l)"></div><p style="font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--rose);letter-spacing:5px;margin:0;text-transform:uppercase;background:var(--rose-p);padding:4px 11px 4px 16px;border-radius:20px">Privacy Policy</p><div style="width:44px;height:1px;background:var(--rose-l)"></div></div>
-    <h1 style="font-family:'Zen Maru Gothic',sans-serif;font-size:var(--page-h1-fs,48px);font-weight:500;background:linear-gradient(135deg,#e8818f 0%,#f7bcc6 18%,#d85f72 38%,#e8818f 55%,#c94f63 72%,#e8818f 88%,#b8405a 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:2px;white-space:var(--page-h1-ws,normal);position:relative">プライバシーポリシー</h1>
+    
+    <h1 style="font-family:'Zen Old Mincho',serif;font-size:var(--page-h1-fs,48px);font-weight:500;background:linear-gradient(135deg,#e8818f 0%,#f7bcc6 18%,#d85f72 38%,#e8818f 55%,#c94f63 72%,#e8818f 88%,#b8405a 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:2px;white-space:var(--page-h1-ws,normal);position:relative">プライバシーポリシー</h1>
   </div>
   <section style="background:var(--white);padding:var(--py) var(--px)">
-    <div style="max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:32px">
+    <div style="max-width:var(--c);margin:0 auto;display:flex;flex-direction:column;gap:32px">
       <div>
         <h3 style="font-size:var(--h3);font-weight:500;color:var(--dark);margin-bottom:12px">事業者情報</h3>
-        <p style="font-size:17px;color:var(--mid);line-height:2.0">Lumileight（以下「当社」）<br>代表者：城本 友香</p>
+        <p style="font-size:17px;color:var(--mid);line-height:2.0">合同会社Lumileight（以下「当社」）<br>代表者：城本 友香<br>所在地：〒160-0023 東京都新宿区西新宿3丁目3番13号 西新宿水間ビル6階</p>
       </div>
       <p style="font-size:17px;color:var(--mid);line-height:2.0">当社は、お客様の個人情報を適切に取り扱うことが社会的責務であると認識し、以下の方針に基づき個人情報の保護に努めます。</p>
       <div>
@@ -175,7 +170,7 @@
       <p style="font-size:15px;color:var(--light);margin-top:8px">2026年制定</p>
     </div>
   </section>
-
+</sc-if>
 
 <!-- ══════════ FOOTER ══════════ -->
 <footer style="background:var(--cream2);padding:60px var(--px) 0;position:relative">
